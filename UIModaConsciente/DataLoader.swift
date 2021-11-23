@@ -15,7 +15,7 @@ public class DataLoader {
         loadRecentData()
     }
     func loadRecentData() {
-        if let fileLocation = Bundle.main.url(forResource: "recent_data", withExtension: "json") {
+        if let fileLocation = Bundle.main.url(forResource: "recentData", withExtension: "json") {
             do {
                 let recentData = try Data(contentsOf:fileLocation);
                 let jsonDecoder = JSONDecoder();
