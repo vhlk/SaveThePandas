@@ -8,7 +8,7 @@
 import Foundation
 
 struct RecentClothe: Codable {
-    var name: String;
-    var type: String;
-    var id: Int;
+    var name: String
+    var type: String
+    var id: Int
 }
