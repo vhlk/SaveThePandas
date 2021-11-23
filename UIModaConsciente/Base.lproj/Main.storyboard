@@ -390,14 +390,26 @@ que a média da categoria.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Component 1(1)" translatesAutoresizingMaskIntoConstraints="NO" id="Yoq-oI-FpW">
-                                <rect key="frame" x="23" y="642" width="372" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Component 2" translatesAutoresizingMaskIntoConstraints="NO" id="wvh-Fq-A4C">
                                 <rect key="frame" x="23" y="763" width="372" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Component 1(1)" translatesAutoresizingMaskIntoConstraints="NO" id="Yoq-oI-FpW">
+                                <rect key="frame" x="21" y="642" width="372" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3f-4X-Vdh">
+                                <rect key="frame" x="238" y="630" width="157" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="add-icon" title="Faça sua avaliação" imagePadding="10">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="12"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="bax-A1-6NF" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="3xh-uH-Obd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZbA-6c-QU9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -407,6 +419,98 @@ que a média da categoria.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wd9-K8-1Sm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2282.608695652174" y="136.60714285714286"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="TXD-9y-tTK">
+            <objects>
+                <viewController id="bax-A1-6NF" customClass="PopUpViewController" customModule="UIModaConsciente" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BRW-Hk-5ln">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" verticalHuggingPriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="lLb-lB-P3C">
+                                <rect key="frame" x="40" y="240.5" width="334" height="415"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rating-stars" translatesAutoresizingMaskIntoConstraints="NO" id="Vjs-Jq-GmH">
+                                        <rect key="frame" x="89.5" y="50" width="155" height="26"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JFd-rs-V4r">
+                                        <rect key="frame" x="20" y="126" width="294" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Descreva com detalhes o que achou dessa peça..." textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="SrY-k1-xgT">
+                                        <rect key="frame" x="20" y="190" width="294" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="RxV-za-YkY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pn-Vn-suf">
+                                        <rect key="frame" x="82" y="330" width="170" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Cwn-ls-R8w"/>
+                                            <constraint firstAttribute="width" constant="170" id="DCn-9e-Jb1"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Enviar avaliação" titleAlignment="center">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="SendButton:" destination="bax-A1-6NF" eventType="touchUpInside" id="8zv-Tn-MUS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odq-Md-KQN">
+                                        <rect key="frame" x="20" y="168" width="65" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie8-NI-Rp1">
+                                        <rect key="frame" x="20" y="104" width="38.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ie8-NI-Rp1" firstAttribute="leading" secondItem="lLb-lB-P3C" secondAttribute="leading" constant="20" id="2HI-PW-sco"/>
+                                    <constraint firstItem="JFd-rs-V4r" firstAttribute="top" secondItem="Ie8-NI-Rp1" secondAttribute="bottom" constant="5" id="4bm-ka-Jei"/>
+                                    <constraint firstItem="3pn-Vn-suf" firstAttribute="centerX" secondItem="lLb-lB-P3C" secondAttribute="centerX" id="8ZG-wb-hdU"/>
+                                    <constraint firstItem="JFd-rs-V4r" firstAttribute="centerX" secondItem="lLb-lB-P3C" secondAttribute="centerX" id="8a7-C6-MGU"/>
+                                    <constraint firstItem="SrY-k1-xgT" firstAttribute="top" secondItem="Odq-Md-KQN" secondAttribute="bottom" constant="5" id="8qB-Xh-rco"/>
+                                    <constraint firstItem="Vjs-Jq-GmH" firstAttribute="top" secondItem="lLb-lB-P3C" secondAttribute="top" constant="50" id="A5t-oC-bQz"/>
+                                    <constraint firstItem="JFd-rs-V4r" firstAttribute="leading" secondItem="lLb-lB-P3C" secondAttribute="leading" constant="20" id="HY2-XL-L6I"/>
+                                    <constraint firstItem="Odq-Md-KQN" firstAttribute="top" secondItem="JFd-rs-V4r" secondAttribute="bottom" constant="8" id="TdF-Zm-bZb"/>
+                                    <constraint firstAttribute="trailing" secondItem="JFd-rs-V4r" secondAttribute="trailing" constant="20" id="WOY-KT-3jh"/>
+                                    <constraint firstAttribute="trailing" secondItem="SrY-k1-xgT" secondAttribute="trailing" constant="20" id="WQj-Nm-IK6"/>
+                                    <constraint firstItem="JFd-rs-V4r" firstAttribute="top" secondItem="Vjs-Jq-GmH" secondAttribute="bottom" constant="50" id="ZtY-g1-Sz1"/>
+                                    <constraint firstAttribute="bottom" secondItem="3pn-Vn-suf" secondAttribute="bottom" constant="40" id="bTV-eN-iow"/>
+                                    <constraint firstItem="3pn-Vn-suf" firstAttribute="top" secondItem="SrY-k1-xgT" secondAttribute="bottom" constant="40" id="i3T-71-hzO"/>
+                                    <constraint firstItem="Odq-Md-KQN" firstAttribute="leading" secondItem="lLb-lB-P3C" secondAttribute="leading" constant="20" id="nID-aA-cxH"/>
+                                    <constraint firstItem="3pn-Vn-suf" firstAttribute="centerX" secondItem="lLb-lB-P3C" secondAttribute="centerX" id="nKr-Ao-b7w"/>
+                                    <constraint firstItem="SrY-k1-xgT" firstAttribute="leading" secondItem="lLb-lB-P3C" secondAttribute="leading" constant="20" id="oBI-gg-hJf"/>
+                                    <constraint firstItem="Vjs-Jq-GmH" firstAttribute="centerX" secondItem="lLb-lB-P3C" secondAttribute="centerX" id="rdl-Uy-6Q3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="efE-p4-kwI"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.23643594703926946" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="efE-p4-kwI" firstAttribute="trailing" secondItem="lLb-lB-P3C" secondAttribute="trailing" constant="40" id="2hD-eH-buG"/>
+                            <constraint firstItem="lLb-lB-P3C" firstAttribute="leading" secondItem="efE-p4-kwI" secondAttribute="leading" constant="40" id="ckQ-oW-1na"/>
+                            <constraint firstItem="lLb-lB-P3C" firstAttribute="centerY" secondItem="BRW-Hk-5ln" secondAttribute="centerY" id="jSU-aV-uxZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3z5-eS-gvz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dv9-Gc-dLY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3091.304347826087" y="136.60714285714286"/>
         </scene>
     </scenes>
     <resources>
@@ -423,12 +527,14 @@ que a média da categoria.</string>
         <image name="Rectangle 7" width="316" height="36"/>
         <image name="Vector" width="30" height="30"/>
         <image name="Vector 2" width="20" height="15"/>
+        <image name="add-icon" width="10" height="10"/>
         <image name="camisa-pintada 1" width="150" height="151"/>
         <image name="icon - calca" width="126" height="126"/>
         <image name="icon - camisa" width="48" height="48"/>
         <image name="icon - saia" width="144" height="144"/>
         <image name="image 6" width="375" height="667"/>
         <image name="image 7" width="1014" height="396"/>
+        <image name="rating-stars" width="155" height="26"/>
         <image name="whatsapp_image_2021-04-08_at_11.21.37 1" width="1014" height="396"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

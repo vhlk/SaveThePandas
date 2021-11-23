@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C71BBA9274CA963008DD6A8 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C71BBA8274CA963008DD6A8 /* PopUpViewController.swift */; };
 		F520E2882738380F0017783F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F520E2872738380F0017783F /* AppDelegate.swift */; };
 		F520E28A2738380F0017783F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F520E2892738380F0017783F /* SceneDelegate.swift */; };
 		F520E28C2738380F0017783F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F520E28B2738380F0017783F /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C71BBA8274CA963008DD6A8 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		F520E2842738380F0017783F /* UIModaConsciente.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIModaConsciente.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F520E2872738380F0017783F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F520E2892738380F0017783F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				F520E2872738380F0017783F /* AppDelegate.swift */,
 				F520E2892738380F0017783F /* SceneDelegate.swift */,
 				F520E28B2738380F0017783F /* ViewController.swift */,
+				9C71BBA8274CA963008DD6A8 /* PopUpViewController.swift */,
 				F520E28D2738380F0017783F /* Main.storyboard */,
 				F520E290273838110017783F /* Assets.xcassets */,
 				F520E292273838110017783F /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				F520E28C2738380F0017783F /* ViewController.swift in Sources */,
 				F520E2882738380F0017783F /* AppDelegate.swift in Sources */,
 				F520E28A2738380F0017783F /* SceneDelegate.swift in Sources */,
+				9C71BBA9274CA963008DD6A8 /* PopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
