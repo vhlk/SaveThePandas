@@ -1,0 +1,22 @@
+[
+	{
+		"name":"Riachuelo",
+		"type":"Camisa",
+		"id":1
+	},
+	{
+		"name":"M. Officer",
+		"type":"Camisa",
+		"id":2
+	},
+	{
+		"name":"Zara",
+		"type":"Calça",
+		"id":3
+	},
+	{
+		"name":"Mash",
+		"type":"Saia",
+		"id":4
+	}
+]
