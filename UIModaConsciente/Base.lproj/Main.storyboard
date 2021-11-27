@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sfp-v8-1Kp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -197,7 +197,6 @@ Mash</string>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="cameraButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="giz-d0-rgC"/>
-                                    <segue destination="C0Q-Rn-oRr" kind="show" id="Rfm-xS-L1N"/>
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Buscar roupa recente" translatesAutoresizingMaskIntoConstraints="NO" id="dqC-vm-tWN">
@@ -232,58 +231,6 @@ Mash</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlW-Yw-LzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-907.24637681159425" y="136.60714285714286"/>
-        </scene>
-        <!--Câmera-->
-        <scene sceneID="C8f-6B-Zgu">
-            <objects>
-                <viewController id="C0Q-Rn-oRr" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UsT-PM-pBg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image 6" translatesAutoresizingMaskIntoConstraints="NO" id="sL9-8T-ETE">
-                                <rect key="frame" x="-65" y="88" width="495" height="861"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 22" translatesAutoresizingMaskIntoConstraints="NO" id="mUc-1q-5AS">
-                                <rect key="frame" x="27" y="290" width="360" height="347"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 22" translatesAutoresizingMaskIntoConstraints="NO" id="DPS-dR-MYJ">
-                                <rect key="frame" x="177" y="335" width="165" height="273"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMO-9w-gb2">
-                                <rect key="frame" x="178" y="792" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="">
-                                    <backgroundConfiguration key="background" image="Ellipse 7"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="xN5-Bi-sxT" kind="show" id="MEz-0X-C4O"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Posicione a etiqueta aqui" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjY-rg-NEu">
-                                <rect key="frame" x="57" y="252" width="303" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                <color key="textColor" systemColor="systemIndigoColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 6" translatesAutoresizingMaskIntoConstraints="NO" id="EkE-5a-YjL">
-                                <rect key="frame" x="190" y="805" width="35" height="35"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="irh-Hk-oLc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Câmera" id="p52-QX-mso"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zDd-Ad-bxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1153.6231884057972" y="136.60714285714286"/>
         </scene>
         <!--Camiseta básica-->
         <scene sceneID="A3x-7g-a5z">
@@ -621,12 +568,9 @@ que a média da categoria.</string>
         <image name="Component 2" width="1973" height="512"/>
         <image name="Ellipse 2" width="204" height="204"/>
         <image name="Ellipse 3" width="32" height="32"/>
-        <image name="Ellipse 6" width="47" height="47"/>
-        <image name="Ellipse 7" width="71" height="71"/>
         <image name="Group 6" width="22" height="22"/>
         <image name="Group 9" width="22" height="22"/>
         <image name="Rectangle 18" width="1014" height="396"/>
-        <image name="Rectangle 22" width="281" height="315"/>
         <image name="Rectangle 5" width="316" height="82"/>
         <image name="Rectangle 7" width="316" height="36"/>
         <image name="Vector" width="30" height="30"/>
@@ -636,7 +580,6 @@ que a média da categoria.</string>
         <image name="icon - calca" width="126" height="126"/>
         <image name="icon - camisa" width="48" height="48"/>
         <image name="icon - saia" width="144" height="144"/>
-        <image name="image 6" width="375" height="667"/>
         <image name="image 7" width="1014" height="396"/>
         <image name="whatsapp_image_2021-04-08_at_11.21.37 1" width="1014" height="396"/>
         <systemColor name="labelColor">
@@ -647,9 +590,6 @@ que a média da categoria.</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
