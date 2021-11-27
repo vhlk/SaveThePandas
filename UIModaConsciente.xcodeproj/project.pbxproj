@@ -13,6 +13,8 @@
 		F520E28F2738380F0017783F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F520E28D2738380F0017783F /* Main.storyboard */; };
 		F520E291273838110017783F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F520E290273838110017783F /* Assets.xcassets */; };
 		F520E294273838110017783F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F520E292273838110017783F /* LaunchScreen.storyboard */; };
+		F5E904A8274D35FF00B410F6 /* ViewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E904A7274D35FF00B410F6 /* ViewItemViewController.swift */; };
+		F5E904AA274D518D00B410F6 /* ReviewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E904A9274D518C00B410F6 /* ReviewsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		F520E290273838110017783F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F520E293273838110017783F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F520E295273838110017783F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5E904A7274D35FF00B410F6 /* ViewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewItemViewController.swift; sourceTree = "<group>"; };
+		F5E904A9274D518C00B410F6 /* ReviewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				F520E2892738380F0017783F /* SceneDelegate.swift */,
 				F520E28B2738380F0017783F /* ViewController.swift */,
 				F520E28D2738380F0017783F /* Main.storyboard */,
+				F5E904A9274D518C00B410F6 /* ReviewsCollectionViewCell.swift */,
+				F5E904A7274D35FF00B410F6 /* ViewItemViewController.swift */,
 				F520E290273838110017783F /* Assets.xcassets */,
 				F520E292273838110017783F /* LaunchScreen.storyboard */,
 				F520E295273838110017783F /* Info.plist */,
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E904A8274D35FF00B410F6 /* ViewItemViewController.swift in Sources */,
 				F520E28C2738380F0017783F /* ViewController.swift in Sources */,
 				F520E2882738380F0017783F /* AppDelegate.swift in Sources */,
+				F5E904AA274D518D00B410F6 /* ReviewsCollectionViewCell.swift in Sources */,
 				F520E28A2738380F0017783F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
