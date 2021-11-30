@@ -1,13 +1,13 @@
 //
-//  ViewItemViewController.swift
+//  ViewAllReviewViewController.swift
 //  UIModaConsciente
 //
-//  Created by vh on 23/11/21.
+//  Created by vh on 29/11/21.
 //
 
 import UIKit
 
-class ViewItemViewController: UIViewController, UICollectionViewDataSource {
+class ViewAllReviewViewController: UIViewController, UICollectionViewDataSource {
     
     var numOfReviews = 3;
     var names = ["Ana Paula", "Joana De Arc", "Pero Cabral"]
@@ -15,15 +15,13 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
     var reviewsStars = [5, 4, 5]
     var rostos = ["Ellipse 3 - carinhaMulher", "Ellipse 3 - carinhaHomem", "Ellipse 3"]
     
-    @IBOutlet weak var reviewsCollectionView: UICollectionView!
     
+    @IBOutlet weak var reviewsCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         reviewsCollectionView.dataSource = self
-        
-        print(numOfReviews)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -31,7 +29,7 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -73,4 +71,5 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
         
         return reviewCollectionViewCell
     }
+
 }

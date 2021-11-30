@@ -17,4 +17,5 @@ class ReviewsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var estrela3ImageView: UIImageView!
     @IBOutlet weak var estrela4ImageView: UIImageView!
     @IBOutlet weak var estrela5ImageView: UIImageView!
+    @IBOutlet weak var rostoImageView: UIImageView!
 }
