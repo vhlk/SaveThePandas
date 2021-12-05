@@ -9,12 +9,11 @@ import UIKit
 
 class ViewAllReviewViewController: UIViewController, UICollectionViewDataSource {
     
-    var numOfReviews = 3;
-    var names = ["Ana Paula", "Joana De Arc", "Pero Cabral"]
-    var reviews = ["Loved it!", "Great!", "Love"]
-    var reviewsStars = [5, 4, 5]
-    var rostos = ["Ellipse 3 - carinhaMulher", "Ellipse 3 - carinhaHomem", "Ellipse 3"]
-    
+    private var numOfReviews = 0;
+    private var names: [String] = []
+    private var reviews: [String] = []
+    private var reviewsStars: [Int] = []
+    private var rostos: [String] = []
     
     @IBOutlet weak var reviewsCollectionView: UICollectionView!
     
@@ -22,6 +21,14 @@ class ViewAllReviewViewController: UIViewController, UICollectionViewDataSource 
         super.viewDidLoad()
 
         reviewsCollectionView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let reviewsDatabase = ReviewsDatabase()
+        
+        (names, reviews, reviewsStars, rostos) = reviewsDatabase.getAllReviews()
+        
+        numOfReviews = names.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

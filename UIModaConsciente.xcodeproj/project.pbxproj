@@ -21,6 +21,7 @@
 		F520E291273838110017783F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F520E290273838110017783F /* Assets.xcassets */; };
 		F520E294273838110017783F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F520E292273838110017783F /* LaunchScreen.storyboard */; };
 		F5E291B12755AF800077F1BF /* ViewAllReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E291B02755AF800077F1BF /* ViewAllReviewViewController.swift */; };
+		F5E291B3275C2F5E0077F1BF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E291B2275C2F5E0077F1BF /* Model.swift */; };
 		F5E904A8274D35FF00B410F6 /* ViewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E904A7274D35FF00B410F6 /* ViewItemViewController.swift */; };
 		F5E904AA274D518D00B410F6 /* ReviewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E904A9274D518C00B410F6 /* ReviewsCollectionViewCell.swift */; };
 		F5E904AC27558CE400B410F6 /* TelaItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E904AB27558CE400B410F6 /* TelaItem.storyboard */; };
@@ -43,6 +44,7 @@
 		F520E293273838110017783F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F520E295273838110017783F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5E291B02755AF800077F1BF /* ViewAllReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllReviewViewController.swift; sourceTree = "<group>"; };
+		F5E291B2275C2F5E0077F1BF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F5E904A7274D35FF00B410F6 /* ViewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewItemViewController.swift; sourceTree = "<group>"; };
 		F5E904A9274D518C00B410F6 /* ReviewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F5E904AB27558CE400B410F6 /* TelaItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaItem.storyboard; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				F5E904A9274D518C00B410F6 /* ReviewsCollectionViewCell.swift */,
 				F5E904A7274D35FF00B410F6 /* ViewItemViewController.swift */,
 				F520E290273838110017783F /* Assets.xcassets */,
+				F5E291B2275C2F5E0077F1BF /* Model.swift */,
 				F520E292273838110017783F /* LaunchScreen.storyboard */,
 				F520E295273838110017783F /* Info.plist */,
 				F5E904AB27558CE400B410F6 /* TelaItem.storyboard */,
@@ -177,6 +180,7 @@
 				EE095C0A274D414500B4928A /* NewsArticle.swift in Sources */,
 				EE095C02274D1DC800B4928A /* DataLoader.swift in Sources */,
 				F5E904A8274D35FF00B410F6 /* ViewItemViewController.swift in Sources */,
+				F5E291B3275C2F5E0077F1BF /* Model.swift in Sources */,
 				F520E28C2738380F0017783F /* ViewController.swift in Sources */,
 				EE095C06274D295400B4928A /* RecentClothesViewController.swift in Sources */,
 				EE095C00274D1C3900B4928A /* RecentClothe.swift in Sources */,
