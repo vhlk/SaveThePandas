@@ -381,23 +381,23 @@ que a média da categoria.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelaDourada" translatesAutoresizingMaskIntoConstraints="NO" id="afM-2s-YIg" userLabel="Estrela2AvalGeral">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelinhaHiRes" translatesAutoresizingMaskIntoConstraints="NO" id="afM-2s-YIg" userLabel="Estrela2AvalGeral">
                                 <rect key="frame" x="176" y="154" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelaDourada" translatesAutoresizingMaskIntoConstraints="NO" id="fuP-KW-Ag4" userLabel="Estrela3AvalGeral">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelinhaHiRes" translatesAutoresizingMaskIntoConstraints="NO" id="fuP-KW-Ag4" userLabel="Estrela3AvalGeral">
                                 <rect key="frame" x="229" y="154" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelaVazia" translatesAutoresizingMaskIntoConstraints="NO" id="EsM-41-xgK" userLabel="Estrela5AvalGeral">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelinhaVaziaHiRes" translatesAutoresizingMaskIntoConstraints="NO" id="EsM-41-xgK" userLabel="Estrela5AvalGeral">
                                 <rect key="frame" x="335" y="154" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelaDourada" translatesAutoresizingMaskIntoConstraints="NO" id="zCX-YC-J7j" userLabel="Estrela1AvalGeral">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelinhaHiRes" translatesAutoresizingMaskIntoConstraints="NO" id="zCX-YC-J7j" userLabel="Estrela1AvalGeral">
                                 <rect key="frame" x="123" y="154" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelaDourada" translatesAutoresizingMaskIntoConstraints="NO" id="SD8-Xb-9cg" userLabel="Estrela4AvalGeral">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelinhaHiRes" translatesAutoresizingMaskIntoConstraints="NO" id="SD8-Xb-9cg" userLabel="Estrela4AvalGeral">
                                 <rect key="frame" x="282" y="154" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -444,6 +444,8 @@ que a média da categoria.</string>
         <image name="Vector 2" width="20" height="15"/>
         <image name="VectorEstrelaDourada" width="13" height="13"/>
         <image name="VectorEstrelaVazia" width="14" height="13"/>
+        <image name="VectorEstrelinhaHiRes" width="512" height="512"/>
+        <image name="VectorEstrelinhaVaziaHiRes" width="551" height="512"/>
         <image name="camisa-pintada 1" width="150" height="151"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

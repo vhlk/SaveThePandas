@@ -50,8 +50,8 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
         
         reviewCollectionViewCell.rostoImageView.image = UIImage(named: rostos[indexPath.row])
         
-        let golderStar = "VectorEstrelaDourada"
-        let emptyStar = "VectorEstrelaVazia"
+        let golderStar = "VectorEstrelinhaHiRes"
+        let emptyStar = "VectorEstrelinhaVaziaHiRes"
         if (reviewsStars[indexPath.row] > 0) {
             reviewCollectionViewCell.estrela1ImageView.image = UIImage(named: golderStar)
         } else {
