@@ -13,40 +13,71 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var newsViewController: UICollectionView!
     
     var newsData = [NewsArticle]();
+    var recentData = [RecentClothe]();
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return newsData.count
-        //return 1
+        if (collectionView == newsViewController) {
+            return newsData.count
+        } else {
+            return recentData.count
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
-        //return newsData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let newsCollectionViewCell = newsViewController.dequeueReusableCell(withReuseIdentifier: "NewsCell", for: indexPath) as! NewsCollectionViewCell
-        //let recentCollectionViewCell = recentViewController.dequeueReusableCell(withReuseIdentifier: "RecentCell", for: indexPath) as! RecentCollectionViewCell
-        
-        let imageName = newsData[indexPath.row].image
-        newsCollectionViewCell.newsImage.image = UIImage(named: imageName)
-        newsCollectionViewCell.newsLabel.text = newsData[indexPath.row].title
-        
-        return newsCollectionViewCell
+        if (collectionView == newsViewController)
+        {
+            let newsCollectionViewCell = newsViewController.dequeueReusableCell(withReuseIdentifier: "NewsCell", for: indexPath) as! NewsCollectionViewCell
+            
+            let imageName = newsData[indexPath.row].image
+            newsCollectionViewCell.newsImage.image = UIImage(named: imageName)
+            newsCollectionViewCell.newsLabel.text = newsData[indexPath.row].title
+            
+            return newsCollectionViewCell
+        } else {
+            let recentCollectionViewCell = recentViewController.dequeueReusableCell(withReuseIdentifier: "RecentCell", for: indexPath) as! RecentCollectionViewCell
+            let Ellipse = "Ellipse 2"
+            recentCollectionViewCell.Ellipse.image = UIImage(named: Ellipse)
+            recentCollectionViewCell.RecentClotheType.text = recentData[indexPath.row].type
+            recentCollectionViewCell.RecentClotheBrand.text = recentData[indexPath.row].name
+            var icon = ""
+            
+            switch recentData[indexPath.row].type
+            {
+            case "Camisa":
+                icon = "icon - camisa"
+            case "Calça":
+                icon = "icon - calca"
+            case "Saia":
+                icon = "icon - saia"
+            case "Vestido":
+                icon = "icon - vestido"
+            default:
+                icon = "icon - camisa"
+            }
+            
+            recentCollectionViewCell.RecentClotheIcon.image = UIImage(named: icon)
+            
+            return recentCollectionViewCell
+        }
+
     }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let recentData = DataLoader().recentClothe
+        recentData = DataLoader().recentClothe
         newsData = DataLoader().newsArticle
         
-        print(recentData)
-        print(newsData)
+        //print(recentData)
+        //print(newsData)
         
         newsViewController.dataSource = self
-        //recentViewController.dataSource = self
+        recentViewController.dataSource = self
         
         // Do any additional setup after loading the view.
     }
