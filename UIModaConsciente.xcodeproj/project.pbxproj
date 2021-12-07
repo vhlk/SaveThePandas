@@ -17,6 +17,7 @@
 		EEE6F111275D4C2300E3A2EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6F110275D4C2300E3A2EA /* HomeViewController.swift */; };
 		EEE6F115275EC14600E3A2EA /* RecentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6F114275EC14600E3A2EA /* RecentCollectionViewCell.swift */; };
 		EEE6F117275FA6FF00E3A2EA /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6F116275FA6FF00E3A2EA /* NewsCollectionViewCell.swift */; };
+		EEE6F119275FE87D00E3A2EA /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE6F118275FE87D00E3A2EA /* PaddingLabel.swift */; };
 		F520E2882738380F0017783F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F520E2872738380F0017783F /* AppDelegate.swift */; };
 		F520E28A2738380F0017783F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F520E2892738380F0017783F /* SceneDelegate.swift */; };
 		F520E28C2738380F0017783F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F520E28B2738380F0017783F /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		EEE6F110275D4C2300E3A2EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EEE6F114275EC14600E3A2EA /* RecentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCollectionViewCell.swift; sourceTree = "<group>"; };
 		EEE6F116275FA6FF00E3A2EA /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		EEE6F118275FE87D00E3A2EA /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		F520E2842738380F0017783F /* UIModaConsciente.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIModaConsciente.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F520E2872738380F0017783F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F520E2892738380F0017783F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				F520E28D2738380F0017783F /* Main.storyboard */,
 				EEBE054F2755B91900EA9C0A /* HomeScreen.storyboard */,
 				EEE6F116275FA6FF00E3A2EA /* NewsCollectionViewCell.swift */,
+				EEE6F118275FE87D00E3A2EA /* PaddingLabel.swift */,
 				F5E904A9274D518C00B410F6 /* ReviewsCollectionViewCell.swift */,
 				EEE6F114275EC14600E3A2EA /* RecentCollectionViewCell.swift */,
 				F5E904A7274D35FF00B410F6 /* ViewItemViewController.swift */,
@@ -187,6 +190,7 @@
 				EEE6F117275FA6FF00E3A2EA /* NewsCollectionViewCell.swift in Sources */,
 				F5E904AA274D518D00B410F6 /* ReviewsCollectionViewCell.swift in Sources */,
 				EEE6F115275EC14600E3A2EA /* RecentCollectionViewCell.swift in Sources */,
+				EEE6F119275FE87D00E3A2EA /* PaddingLabel.swift in Sources */,
 				F520E28A2738380F0017783F /* SceneDelegate.swift in Sources */,
 				9C71BBA9274CA963008DD6A8 /* PopUpViewController.swift in Sources */,
 			);
