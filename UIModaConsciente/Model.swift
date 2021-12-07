@@ -40,4 +40,8 @@ class ReviewsDatabase {
     func getAllReviews() -> ([String], [String], [Int], [String]) {
         return (names, reviews, stars, faces)
     }
+    
+    func getStarsMean() -> Double {
+        return Double(stars.reduce(0, +)) / Double(stars.count)
+    }
 }

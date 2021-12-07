@@ -16,11 +16,23 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
     private var rostos: [String] = []
     
     @IBOutlet weak var reviewsCollectionView: UICollectionView!
+    @IBOutlet weak var reviewStar1ImageView: UIImageView!
+    @IBOutlet weak var reviewStar2ImageView: UIImageView!
+    @IBOutlet weak var reviewStar3ImageView: UIImageView!
+    @IBOutlet weak var reviewStar4ImageView: UIImageView!
+    @IBOutlet weak var reviewStar5ImageView: UIImageView!
+    @IBOutlet weak var reviewMeanLabel: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
         let reviewsDatabase = ReviewsDatabase()
         
         (names, reviews, reviewsStars, rostos) = reviewsDatabase.getAllReviews()
+        
+        let mean = reviewsDatabase.getStarsMean()
+        
+        Utils.setStarsByValue(star1: reviewStar1ImageView, star2: reviewStar2ImageView, star3: reviewStar3ImageView, star4: reviewStar4ImageView, star5: reviewStar5ImageView, value: mean)
+        
+        reviewMeanLabel.text = String(format: "%.1f", mean)
         
         numOfReviews = names.count
     }
@@ -30,7 +42,6 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
         
         reviewsCollectionView.dataSource = self
         
-        print(numOfReviews)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -50,33 +61,7 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
         
         reviewCollectionViewCell.rostoImageView.image = UIImage(named: rostos[indexPath.row])
         
-        let golderStar = "VectorEstrelinhaHiRes"
-        let emptyStar = "VectorEstrelinhaVaziaHiRes"
-        if (reviewsStars[indexPath.row] > 0) {
-            reviewCollectionViewCell.estrela1ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela1ImageView.image = UIImage(named: emptyStar)
-        }
-        if (reviewsStars[indexPath.row] > 1) {
-            reviewCollectionViewCell.estrela2ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela2ImageView.image = UIImage(named: emptyStar)
-        }
-        if (reviewsStars[indexPath.row] > 2) {
-            reviewCollectionViewCell.estrela3ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela3ImageView.image = UIImage(named: emptyStar)
-        }
-        if (reviewsStars[indexPath.row] > 3) {
-            reviewCollectionViewCell.estrela4ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela4ImageView.image = UIImage(named: emptyStar)
-        }
-        if (reviewsStars[indexPath.row] > 4) {
-            reviewCollectionViewCell.estrela5ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela5ImageView.image = UIImage(named: emptyStar)
-        }
+        Utils.setStarsByValue(star1: reviewCollectionViewCell.estrela1ImageView, star2: reviewCollectionViewCell.estrela2ImageView, star3: reviewCollectionViewCell.estrela3ImageView, star4: reviewCollectionViewCell.estrela4ImageView, star5: reviewCollectionViewCell.estrela5ImageView, value: Double(reviewsStars[indexPath.row]))
         
         return reviewCollectionViewCell
     }

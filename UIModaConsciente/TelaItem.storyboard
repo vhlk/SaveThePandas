@@ -269,6 +269,12 @@ que a média da categoria.</string>
                     </view>
                     <navigationItem key="navigationItem" title="Camiseta básica" id="pMJ-Tv-c4h"/>
                     <connections>
+                        <outlet property="reviewMeanLabel" destination="B8a-f3-pqW" id="4Cx-Z4-XPS"/>
+                        <outlet property="reviewStar1ImageView" destination="fiY-MU-37A" id="EdA-b7-Ak4"/>
+                        <outlet property="reviewStar2ImageView" destination="fiY-MU-37A" id="bdQ-GO-oWy"/>
+                        <outlet property="reviewStar3ImageView" destination="XtD-35-MzM" id="XOn-8q-Vcq"/>
+                        <outlet property="reviewStar4ImageView" destination="Vz3-FQ-Klm" id="bUH-vR-oC5"/>
+                        <outlet property="reviewStar5ImageView" destination="ZCq-Mu-U68" id="vfB-zu-K4o"/>
                         <outlet property="reviewsCollectionView" destination="hlN-lK-M8B" id="MVg-0d-ylG"/>
                     </connections>
                 </viewController>
@@ -381,6 +387,10 @@ que a média da categoria.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelinhaHiRes" translatesAutoresizingMaskIntoConstraints="NO" id="zCX-YC-J7j" userLabel="Estrela1AvalGeral">
+                                <rect key="frame" x="123" y="154" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelinhaHiRes" translatesAutoresizingMaskIntoConstraints="NO" id="afM-2s-YIg" userLabel="Estrela2AvalGeral">
                                 <rect key="frame" x="176" y="154" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -389,16 +399,12 @@ que a média da categoria.</string>
                                 <rect key="frame" x="229" y="154" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelinhaVaziaHiRes" translatesAutoresizingMaskIntoConstraints="NO" id="EsM-41-xgK" userLabel="Estrela5AvalGeral">
-                                <rect key="frame" x="335" y="154" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelinhaHiRes" translatesAutoresizingMaskIntoConstraints="NO" id="zCX-YC-J7j" userLabel="Estrela1AvalGeral">
-                                <rect key="frame" x="123" y="154" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelinhaHiRes" translatesAutoresizingMaskIntoConstraints="NO" id="SD8-Xb-9cg" userLabel="Estrela4AvalGeral">
                                 <rect key="frame" x="282" y="154" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VectorEstrelinhaVaziaHiRes" translatesAutoresizingMaskIntoConstraints="NO" id="EsM-41-xgK" userLabel="Estrela5AvalGeral">
+                                <rect key="frame" x="335" y="154" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -407,7 +413,13 @@ que a média da categoria.</string>
                     </view>
                     <navigationItem key="navigationItem" id="ZQA-60-zjD"/>
                     <connections>
+                        <outlet property="meanLabel" destination="c8y-Um-JWn" id="GPA-Eb-nOQ"/>
                         <outlet property="reviewsCollectionView" destination="OHX-FE-Ecq" id="veh-V7-XLp"/>
+                        <outlet property="star1" destination="zCX-YC-J7j" id="sAd-ep-kdh"/>
+                        <outlet property="star2" destination="afM-2s-YIg" id="xJo-ng-SZ7"/>
+                        <outlet property="star3" destination="fuP-KW-Ag4" id="J1g-DZ-6Y4"/>
+                        <outlet property="star4" destination="SD8-Xb-9cg" id="b5K-vb-fg5"/>
+                        <outlet property="star5" destination="EsM-41-xgK" id="Ran-8d-Mu5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wo1-oD-I0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

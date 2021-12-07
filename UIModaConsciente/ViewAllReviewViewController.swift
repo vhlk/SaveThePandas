@@ -16,6 +16,12 @@ class ViewAllReviewViewController: UIViewController, UICollectionViewDataSource 
     private var rostos: [String] = []
     
     @IBOutlet weak var reviewsCollectionView: UICollectionView!
+    @IBOutlet weak var star1: UIImageView!
+    @IBOutlet weak var star2: UIImageView!
+    @IBOutlet weak var star3: UIImageView!
+    @IBOutlet weak var star4: UIImageView!
+    @IBOutlet weak var star5: UIImageView!
+    @IBOutlet weak var meanLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +33,12 @@ class ViewAllReviewViewController: UIViewController, UICollectionViewDataSource 
         let reviewsDatabase = ReviewsDatabase()
         
         (names, reviews, reviewsStars, rostos) = reviewsDatabase.getAllReviews()
+        
+        let mean = reviewsDatabase.getStarsMean()
+        
+        setStarsByValue(star1: star1, star2: star2, star3: star3, star4: star4, star5: star5, value: mean)
+        
+        meanLabel.text = String(format: "%.1f", mean)
         
         numOfReviews = names.count
     }
@@ -48,35 +60,41 @@ class ViewAllReviewViewController: UIViewController, UICollectionViewDataSource 
         
         reviewCollectionViewCell.rostoImageView.image = UIImage(named: rostos[indexPath.row])
         
-        let golderStar = "VectorEstrelaDourada"
-        let emptyStar = "VectorEstrelaVazia"
-        if (reviewsStars[indexPath.row] > 0) {
-            reviewCollectionViewCell.estrela1ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela1ImageView.image = UIImage(named: emptyStar)
-        }
-        if (reviewsStars[indexPath.row] > 1) {
-            reviewCollectionViewCell.estrela2ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela2ImageView.image = UIImage(named: emptyStar)
-        }
-        if (reviewsStars[indexPath.row] > 2) {
-            reviewCollectionViewCell.estrela3ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela3ImageView.image = UIImage(named: emptyStar)
-        }
-        if (reviewsStars[indexPath.row] > 3) {
-            reviewCollectionViewCell.estrela4ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela4ImageView.image = UIImage(named: emptyStar)
-        }
-        if (reviewsStars[indexPath.row] > 4) {
-            reviewCollectionViewCell.estrela5ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela5ImageView.image = UIImage(named: emptyStar)
-        }
+        setStarsByValue(star1: reviewCollectionViewCell.estrela1ImageView, star2: reviewCollectionViewCell.estrela2ImageView, star3: reviewCollectionViewCell.estrela3ImageView, star4: reviewCollectionViewCell.estrela4ImageView, star5: reviewCollectionViewCell.estrela5ImageView, value: Double(reviewsStars[indexPath.row]))
         
         return reviewCollectionViewCell
+    }
+    
+    func setStarsByValue(star1: UIImageView, star2: UIImageView, star3: UIImageView, star4: UIImageView, star5: UIImageView, value: Double) {
+        
+        let golderStar = "VectorEstrelinhaHiRes"
+        let emptyStar = "VectorEstrelinhaVaziaHiRes"
+        
+        if (value > 0) {
+            star1.image = UIImage(named: golderStar)
+        } else {
+            star1.image = UIImage(named: emptyStar)
+        }
+        if (value > 1) {
+            star2.image = UIImage(named: golderStar)
+        } else {
+            star2.image = UIImage(named: emptyStar)
+        }
+        if (value > 2) {
+            star3.image = UIImage(named: golderStar)
+        } else {
+            star3.image = UIImage(named: emptyStar)
+        }
+        if (value > 3) {
+            star4.image = UIImage(named: golderStar)
+        } else {
+            star4.image = UIImage(named: emptyStar)
+        }
+        if (value > 4) {
+            star5.image = UIImage(named: golderStar)
+        } else {
+            star5.image = UIImage(named: emptyStar)
+        }
     }
 
 }
