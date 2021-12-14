@@ -1,17 +1,22 @@
 [
 	{
 		"title":"Artistas investem em moda sustentável e consciente",
-		"image":"whatsapp_image_2021-04-08_at_11.21.37 1.png",
+		"image":"news1.png",
 		"link":"https://revistaquem.globo.com/Um-So-Planeta/noticia/2021/05/artistas-investem-em-moda-sustentavel-e-consciente.html#:~:text=Gloria%20Pires%2C%20Marina%20Ruy%20Barbosa,gerar%20um%20moda%20menos%20poluente&text=A%20consci%C3%AAncia%20em%20rela%C3%A7%C3%A3o%20ao,paralela%20no%20mundo%20da%20moda."
 	},
 	{
 		"title":"Mais de 35 marcas de moda estão envolvidas com trabalho escravo no Brasil",
-		"image":"image 7.png",
+		"image":"news2.png",
 		"link":"https://www.brasildefatope.com.br/2019/01/01/mais-de-35-marcas-de-moda-estao-envolvidas-com-trabalho-escravo-no-brasil"
 	},
 	{
 		"title":"10 brechós em Brasília pra comprar roupa barata e praticar a moda consciente",
-		"image":"Rectangle 18.png",
+		"image":"news3.png",
 		"link":"https://www.curtamais.com.br/brasilia/10-brechos-em-brasilia-pra-comprar-roupa-barata-e-praticar-a-moda-consciente"
-	}
+	},
+    {
+        "title":"Malwee lança laboratório de inovação para reduzir impactos da moda no meio ambiente",
+        "image":"news4.png",
+        "link":"https://epocanegocios.globo.com/Um-So-Planeta/noticia/2021/11/malwee-lanca-laboratorio-de-inovacao-para-reduzir-impactos-da-moda-no-meio-ambiente.html"
+    }
 ]
