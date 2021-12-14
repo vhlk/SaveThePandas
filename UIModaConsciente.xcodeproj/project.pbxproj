@@ -24,8 +24,12 @@
 		F520E28F2738380F0017783F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F520E28D2738380F0017783F /* Main.storyboard */; };
 		F520E291273838110017783F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F520E290273838110017783F /* Assets.xcassets */; };
 		F520E294273838110017783F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F520E292273838110017783F /* LaunchScreen.storyboard */; };
+		F5E291B12755AF800077F1BF /* ViewAllReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E291B02755AF800077F1BF /* ViewAllReviewViewController.swift */; };
+		F5E291B3275C2F5E0077F1BF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E291B2275C2F5E0077F1BF /* Model.swift */; };
+		F5E291B5275EEACB0077F1BF /* ViewItemsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E291B4275EEACB0077F1BF /* ViewItemsUtils.swift */; };
 		F5E904A8274D35FF00B410F6 /* ViewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E904A7274D35FF00B410F6 /* ViewItemViewController.swift */; };
 		F5E904AA274D518D00B410F6 /* ReviewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E904A9274D518C00B410F6 /* ReviewsCollectionViewCell.swift */; };
+		F5E904AC27558CE400B410F6 /* TelaItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E904AB27558CE400B410F6 /* TelaItem.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +52,12 @@
 		F520E290273838110017783F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F520E293273838110017783F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F520E295273838110017783F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5E291B02755AF800077F1BF /* ViewAllReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllReviewViewController.swift; sourceTree = "<group>"; };
+		F5E291B2275C2F5E0077F1BF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F5E291B4275EEACB0077F1BF /* ViewItemsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewItemsUtils.swift; sourceTree = "<group>"; };
 		F5E904A7274D35FF00B410F6 /* ViewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewItemViewController.swift; sourceTree = "<group>"; };
 		F5E904A9274D518C00B410F6 /* ReviewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F5E904AB27558CE400B410F6 /* TelaItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaItem.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +108,12 @@
 				F520E290273838110017783F /* Assets.xcassets */,
 				EE095C07274D411D00B4928A /* newsData.json */,
 				EE095C03274D258A00B4928A /* recentData.json */,
+				F5E291B2275C2F5E0077F1BF /* Model.swift */,
+				F5E291B4275EEACB0077F1BF /* ViewItemsUtils.swift */,
 				F520E292273838110017783F /* LaunchScreen.storyboard */,
 				F520E295273838110017783F /* Info.plist */,
+				F5E904AB27558CE400B410F6 /* TelaItem.storyboard */,
+				F5E291B02755AF800077F1BF /* ViewAllReviewViewController.swift */,
 			);
 			path = UIModaConsciente;
 			sourceTree = "<group>";
@@ -170,6 +182,7 @@
 				EEBE05502755B91900EA9C0A /* HomeScreen.storyboard in Resources */,
 				F520E28F2738380F0017783F /* Main.storyboard in Resources */,
 				EE095C08274D411D00B4928A /* newsData.json in Resources */,
+				F5E904AC27558CE400B410F6 /* TelaItem.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +196,10 @@
 				EE095C0A274D414500B4928A /* NewsArticle.swift in Sources */,
 				EE095C02274D1DC800B4928A /* DataLoader.swift in Sources */,
 				F5E904A8274D35FF00B410F6 /* ViewItemViewController.swift in Sources */,
+				F5E291B3275C2F5E0077F1BF /* Model.swift in Sources */,
 				F520E28C2738380F0017783F /* ViewController.swift in Sources */,
+				EE095C06274D295400B4928A /* RecentClothesViewController.swift in Sources */,
+				F5E291B5275EEACB0077F1BF /* ViewItemsUtils.swift in Sources */,
 				EE095C00274D1C3900B4928A /* RecentClothe.swift in Sources */,
 				F520E2882738380F0017783F /* AppDelegate.swift in Sources */,
 				EEE6F111275D4C2300E3A2EA /* HomeViewController.swift in Sources */,
@@ -192,6 +208,7 @@
 				EEE6F115275EC14600E3A2EA /* RecentCollectionViewCell.swift in Sources */,
 				EEE6F119275FE87D00E3A2EA /* PaddingLabel.swift in Sources */,
 				F520E28A2738380F0017783F /* SceneDelegate.swift in Sources */,
+				F5E291B12755AF800077F1BF /* ViewAllReviewViewController.swift in Sources */,
 				9C71BBA9274CA963008DD6A8 /* PopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +361,8 @@
 				DEVELOPMENT_TEAM = 9Y6ZNQD445;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UIModaConsciente/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -373,6 +392,8 @@
 				DEVELOPMENT_TEAM = 9Y6ZNQD445;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UIModaConsciente/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
