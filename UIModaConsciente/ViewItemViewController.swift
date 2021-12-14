@@ -9,24 +9,43 @@ import UIKit
 
 class ViewItemViewController: UIViewController, UICollectionViewDataSource {
     
-    var numOfReviews = 3;
-    var names = ["Ana Paula", "Joana De Arc", "Pero Cabral"]
-    var reviews = ["Loved it!", "Great!", "Love"]
-    var reviewsStars = [5, 4, 5]
+    private var numOfReviews = 0;
+    private var names: [String] = []
+    private var reviews: [String] = []
+    private var reviewsStars: [Int] = []
+    private var rostos: [String] = []
     
     @IBOutlet weak var reviewsCollectionView: UICollectionView!
+    @IBOutlet weak var reviewStar1ImageView: UIImageView!
+    @IBOutlet weak var reviewStar2ImageView: UIImageView!
+    @IBOutlet weak var reviewStar3ImageView: UIImageView!
+    @IBOutlet weak var reviewStar4ImageView: UIImageView!
+    @IBOutlet weak var reviewStar5ImageView: UIImageView!
+    @IBOutlet weak var reviewMeanLabel: UITextField!
     
+    override func viewWillAppear(_ animated: Bool) {
+        let reviewsDatabase = ReviewsDatabase()
+        
+        (names, reviews, reviewsStars, rostos) = reviewsDatabase.getAllReviews()
+        
+        let mean = reviewsDatabase.getStarsMean()
+        
+        Utils.setStarsByValue(star1: reviewStar1ImageView, star2: reviewStar2ImageView, star3: reviewStar3ImageView, star4: reviewStar4ImageView, star5: reviewStar5ImageView, value: mean)
+        
+        reviewMeanLabel.text = String(format: "%.1f", mean)
+        
+        numOfReviews = names.count
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         reviewsCollectionView.dataSource = self
         
-        print(numOfReviews)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return numOfReviews
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -40,33 +59,9 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
         reviewCollectionViewCell.nameTextView.text = names[indexPath.row]
         reviewCollectionViewCell.reviewTextView.text = reviews[indexPath.row]
         
-        let golderStar = "VectorEstrelaDourada"
-        let emptyStar = "VectorEstrelaVazia"
-        if (reviewsStars[indexPath.row] > 0) {
-            reviewCollectionViewCell.estrela1ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela1ImageView.image = UIImage(named: emptyStar)
-        }
-        if (reviewsStars[indexPath.row] > 1) {
-            reviewCollectionViewCell.estrela2ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela2ImageView.image = UIImage(named: emptyStar)
-        }
-        if (reviewsStars[indexPath.row] > 2) {
-            reviewCollectionViewCell.estrela3ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela3ImageView.image = UIImage(named: emptyStar)
-        }
-        if (reviewsStars[indexPath.row] > 3) {
-            reviewCollectionViewCell.estrela4ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela4ImageView.image = UIImage(named: emptyStar)
-        }
-        if (reviewsStars[indexPath.row] > 4) {
-            reviewCollectionViewCell.estrela5ImageView.image = UIImage(named: golderStar)
-        } else {
-            reviewCollectionViewCell.estrela5ImageView.image = UIImage(named: emptyStar)
-        }
+        reviewCollectionViewCell.rostoImageView.image = UIImage(named: rostos[indexPath.row])
+        
+        Utils.setStarsByValue(star1: reviewCollectionViewCell.estrela1ImageView, star2: reviewCollectionViewCell.estrela2ImageView, star3: reviewCollectionViewCell.estrela3ImageView, star4: reviewCollectionViewCell.estrela4ImageView, star5: reviewCollectionViewCell.estrela5ImageView, value: Double(reviewsStars[indexPath.row]))
         
         return reviewCollectionViewCell
     }
