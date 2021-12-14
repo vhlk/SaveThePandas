@@ -20,4 +20,7 @@ class PopUpViewController: UIViewController {
         
         dismiss(animated: false)
     }
+    @IBAction func closeButton(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }

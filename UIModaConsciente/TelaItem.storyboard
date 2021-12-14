@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="exo-QS-ZrI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -12,7 +12,7 @@
         <!--Detalhes do item-->
         <scene sceneID="pNC-YM-85J">
             <objects>
-                <viewController title="Item details" modalPresentationStyle="fullScreen" id="kYL-Hc-bfr" userLabel="Detalhes do item" customClass="ViewItemViewController" customModule="UIModaConsciente" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TelaItemPrincipal" title="Item details" modalPresentationStyle="fullScreen" id="kYL-Hc-bfr" userLabel="Detalhes do item" customClass="ViewItemViewController" customModule="UIModaConsciente" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pfx-IW-Yt8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -285,7 +285,7 @@ abrigados com essa compra!</string>
         <!--Todas avaliações-->
         <scene sceneID="u4W-H4-Ajp">
             <objects>
-                <viewController id="wRu-gq-vdQ" userLabel="Todas avaliações" customClass="ViewAllReviewViewController" customModule="UIModaConsciente" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="wRu-gq-vdQ" userLabel="Todas avaliações" customClass="ViewAllReviewViewController" customModule="UIModaConsciente" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eA9-BZ-08e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -421,6 +421,9 @@ abrigados com essa compra!</string>
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="I8d-hw-cwR" kind="presentation" modalPresentationStyle="overCurrentContext" id="KlO-Wo-dJU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FQG-Hv-WMh"/>
@@ -441,24 +444,15 @@ abrigados com essa compra!</string>
             </objects>
             <point key="canvasLocation" x="4188.4057971014499" y="-597.32142857142856"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="oeO-AL-KME">
+        <!--Bilola-->
+        <scene sceneID="mxz-rY-cVx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="exo-QS-ZrI" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BbK-jP-VU3">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="kYL-Hc-bfr" kind="relationship" relationship="rootViewController" id="XtD-LO-rXr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uhN-w1-IFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Bilola" id="I8d-hw-cwR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sGL-Mo-E0s"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ar-Qi-3B6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2250.7246376811595" y="-597.32142857142856"/>
+            <point key="canvasLocation" x="4872" y="-597"/>
         </scene>
     </scenes>
     <resources>

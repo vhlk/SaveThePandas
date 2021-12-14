@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hip-1K-xyR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="130" width="414" height="189"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Recentes" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2p-Lz-WHh" userLabel="Recent Text">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Recentes" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2p-Lz-WHh" userLabel="Recent Text">
                                         <rect key="frame" x="8" y="8" width="398" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -75,6 +75,15 @@
                                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwO-5n-M8o">
+                                                            <rect key="frame" x="0.0" y="0.0" width="103" height="136"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain"/>
+                                                            <connections>
+                                                                <segue destination="lZ9-xs-zia" kind="show" id="XoC-9x-Nmb"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                 </collectionViewCellContentView>
                                                 <size key="customSize" width="103" height="136"/>
@@ -176,7 +185,7 @@
                                             <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="cameraButtonClicked:" destination="jyv-Fr-s3f" eventType="touchUpInside" id="HXZ-ZP-e9E"/>
+                                            <action selector="openCamera:" destination="Y6W-OH-hqX" eventType="touchDown" id="yI1-nk-xDe"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -186,6 +195,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="88A-SB-shp"/>
                     <connections>
                         <outlet property="newsViewController" destination="8x3-Zb-oZP" id="TYD-zA-sDe"/>
                         <outlet property="recentViewController" destination="0LY-jc-Cna" id="aer-fO-bXl"/>
@@ -193,7 +203,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="395.6521739130435" y="20.758928571428569"/>
+            <point key="canvasLocation" x="1304.3478260869567" y="20.089285714285712"/>
+        </scene>
+        <!--TelaItemPrincipal-->
+        <scene sceneID="xyx-8r-C3h">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TelaItem" referencedIdentifier="TelaItemPrincipal" id="lZ9-xs-zia" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0ja-7W-Oa8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gsO-8Q-y2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1305" y="477"/>
         </scene>
         <!--Home-->
         <scene sceneID="4ho-YM-73T">
@@ -397,9 +417,40 @@ Mash</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dDD-A2-Orh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1094" y="21"/>
+            <point key="canvasLocation" x="3726.0869565217395" y="-11.383928571428571"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="euh-PS-Zpt">
+            <objects>
+                <viewControllerPlaceholder id="L5a-Bd-SD2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="637-IG-bHu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286" y="-341"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5hM-sr-qcq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hip-1K-xyR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rbi-ri-gpC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="ks7-WP-MUv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Phw-ZN-kkd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="394.20289855072468" y="20.089285714285712"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="ZYY-MA-2Kn">
+            <size key="intrinsicContentSize" width="382.5" height="17"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Cam Icon" width="61" height="51"/>
         <image name="Ellipse 2" width="204" height="204"/>

@@ -7,13 +7,24 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var recentViewController: UICollectionView!
     @IBOutlet weak var newsViewController: UICollectionView!
     
     var newsData = [NewsArticle]();
     var recentData = [RecentClothe]();
+    
+    
+    @IBAction func openCamera(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                var imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = .camera;
+                imagePicker.allowsEditing = false
+                self.present(imagePicker, animated: true, completion: nil)
+            }
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (collectionView == newsViewController) {
