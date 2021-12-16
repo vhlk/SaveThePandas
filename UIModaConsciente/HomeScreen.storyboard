@@ -199,6 +199,7 @@
                     <connections>
                         <outlet property="newsViewController" destination="8x3-Zb-oZP" id="TYD-zA-sDe"/>
                         <outlet property="recentViewController" destination="0LY-jc-Cna" id="aer-fO-bXl"/>
+                        <segue destination="AGQ-bL-71Y" kind="show" identifier="ShowImageViewCamera" id="Z3O-cZ-B7E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -213,7 +214,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsO-8Q-y2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305" y="477"/>
+            <point key="canvasLocation" x="1801" y="528"/>
         </scene>
         <!--Home-->
         <scene sceneID="4ho-YM-73T">
@@ -445,20 +446,85 @@ Mash</string>
             </objects>
             <point key="canvasLocation" x="394.20289855072468" y="20.089285714285712"/>
         </scene>
+        <!--Câmera-->
+        <scene sceneID="XCp-kd-4gb">
+            <objects>
+                <viewController id="AGQ-bL-71Y" customClass="FakeCameraViewController" customModule="UIModaConsciente" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zhA-wL-FzO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image 6" translatesAutoresizingMaskIntoConstraints="NO" id="ayN-ab-zHK">
+                                <rect key="frame" x="-65" y="88" width="495" height="861"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 22" translatesAutoresizingMaskIntoConstraints="NO" id="XBx-Ao-a5P">
+                                <rect key="frame" x="27" y="290" width="360" height="347"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 22" translatesAutoresizingMaskIntoConstraints="NO" id="mPC-Ua-xei">
+                                <rect key="frame" x="177" y="335" width="165" height="273"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyP-6V-naM">
+                                <rect key="frame" x="178" y="792" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <backgroundConfiguration key="background" image="Ellipse 7"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="TakePicture:" destination="AGQ-bL-71Y" eventType="touchUpInside" id="0Nf-4M-25K"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 6" translatesAutoresizingMaskIntoConstraints="NO" id="Xjr-ak-1po">
+                                <rect key="frame" x="190" y="805" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Posicione a etiqueta aqui" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aD-J3-6V3">
+                                <rect key="frame" x="57" y="252" width="303" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cYf-mq-OKP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Câmera" id="7rq-XU-FPG"/>
+                    <connections>
+                        <segue destination="lZ9-xs-zia" kind="show" identifier="ShowItemSegue" id="HVk-b0-KWg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bh7-k2-fkq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2297" y="20"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="ZYY-MA-2Kn">
             <size key="intrinsicContentSize" width="382.5" height="17"/>
         </designable>
     </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="HVk-b0-KWg"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Cam Icon" width="61" height="51"/>
         <image name="Ellipse 2" width="204" height="204"/>
+        <image name="Ellipse 6" width="47" height="47"/>
+        <image name="Ellipse 7" width="71" height="71"/>
         <image name="Rectangle 18" width="1014" height="396"/>
+        <image name="Rectangle 22" width="281" height="315"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="icon - calca" width="126" height="126"/>
         <image name="icon - camisa" width="48" height="48"/>
         <image name="icon - saia" width="144" height="144"/>
+        <image name="image 6" width="375" height="667"/>
         <image name="image 7" width="1014" height="396"/>
         <image name="whatsapp_image_2021-04-08_at_11.21.37 1" width="1014" height="396"/>
         <systemColor name="labelColor">
@@ -469,6 +535,9 @@ Mash</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -24,6 +24,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 imagePicker.allowsEditing = false
                 self.present(imagePicker, animated: true, completion: nil)
             }
+        else {
+            performSegue(withIdentifier: "ShowImageViewCamera", sender: self)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
