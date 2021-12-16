@@ -76,7 +76,6 @@
 		F520E27B2738380E0017783F = {
 			isa = PBXGroup;
 			children = (
-				F5E291B6276B6BA10077F1BF /* FakeCameraViewController.swift */,
 				F520E2862738380F0017783F /* UIModaConsciente */,
 				F520E2852738380F0017783F /* Products */,
 			);
@@ -93,6 +92,7 @@
 		F520E2862738380F0017783F /* UIModaConsciente */ = {
 			isa = PBXGroup;
 			children = (
+				F5E291B6276B6BA10077F1BF /* FakeCameraViewController.swift */,
 				EE095C01274D1DC800B4928A /* DataLoader.swift */,
 				EE095C09274D414500B4928A /* NewsArticle.swift */,
 				EE095BFF274D1C3900B4928A /* RecentClothe.swift */,
