@@ -285,7 +285,7 @@ abrigados com essa compra!</string>
         <!--Todas avaliações-->
         <scene sceneID="u4W-H4-Ajp">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="wRu-gq-vdQ" userLabel="Todas avaliações" customClass="ViewAllReviewViewController" customModule="UIModaConsciente" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewAllItemsStoryboardID" modalPresentationStyle="fullScreen" id="wRu-gq-vdQ" userLabel="Todas avaliações" customClass="ViewAllReviewViewController" customModule="UIModaConsciente" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eA9-BZ-08e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -17,8 +17,15 @@ class PopUpViewController: UIViewController {
     }
     
     @IBAction func SendButton(_ sender: Any) {
-        
-        dismiss(animated: false)
+        let messageVC = UIAlertController(title: "Avaliação salva", message: "Avaliação salva com sucesso" , preferredStyle: .actionSheet)
+        present(messageVC, animated: true) {
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (_) in
+                            messageVC.dismiss(animated: true, completion: nil)}
+            )
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (_) in
+                self.dismiss(animated: true, completion: nil)}
+            )
+        }
     }
     @IBAction func closeButton(_ sender: Any) {
         dismiss(animated: true)
