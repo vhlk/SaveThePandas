@@ -75,9 +75,10 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
     
     func loadItemData() {
         let nextItem = NextItem()
-        nextItem.setNextItem(phrase: "Os bichos-preguiça continuarão abrigados com essa compra!", image: "camisa-pintada 1", brand: Utils.TypeOfBrand.riachuelo, cloth: Utils.TypeOfCloth.algodao)
-        if let (frase, image, marca, material) = nextItem.getNextItem() {
+        if let (image, marca, material) = nextItem.getNextItem() {
+            itemImage.image = UIImage(named: image)
             itemBrandLabel.text = "Marca: \(marca.rawValue)"
+            itemMaterialLabel.text = "Material: \(material.rawValue)"
         }
     }
     

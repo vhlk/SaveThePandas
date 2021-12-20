@@ -73,7 +73,7 @@ class Utils {
     }
     
     enum TypeOfBrand:String {
-        case zara = "Zar"
+        case zara = "Zara"
         case riachuelo = "Riachuelo"
         case mash = "Mash"
         case reserva = "Reserva"
