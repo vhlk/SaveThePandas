@@ -475,6 +475,18 @@ abrigados com essa compra!</string>
                     </view>
                     <navigationItem key="navigationItem" title="Camiseta básica" id="pMJ-Tv-c4h"/>
                     <connections>
+                        <outlet property="itemBrandEmoti" destination="ixw-5u-wrB" id="b6V-nO-Nqg"/>
+                        <outlet property="itemBrandLabel" destination="vA7-7M-EA5" id="3rF-g3-NXm"/>
+                        <outlet property="itemImage" destination="y4c-qU-pOu" id="7Xj-0s-Txv"/>
+                        <outlet property="itemMateralEmoti" destination="o4q-ie-y6v" id="Pys-wS-A15"/>
+                        <outlet property="itemMaterialLabel" destination="JQF-Bo-QCM" id="ZKH-AM-Ufa"/>
+                        <outlet property="itemPhrase" destination="Zkw-Hn-hke" id="XFO-0V-vHa"/>
+                        <outlet property="itemTree1" destination="Vgl-pY-7YN" id="Syb-HK-umI"/>
+                        <outlet property="itemTree2" destination="Z5f-hZ-t8y" id="LNv-bU-Mk1"/>
+                        <outlet property="itemTree3" destination="Log-bN-TUO" id="Mj9-FK-TzF"/>
+                        <outlet property="itemTree4" destination="4dp-ol-v7t" id="iAP-zk-0AV"/>
+                        <outlet property="itemTree5" destination="5Gg-uz-Hgm" id="Boe-aq-nrp"/>
+                        <outlet property="itemTreePhrase" destination="cn9-3j-ePy" id="pLf-f1-Axh"/>
                         <outlet property="reviewMeanLabel" destination="B8a-f3-pqW" id="4Cx-Z4-XPS"/>
                         <outlet property="reviewStar1Button" destination="Nia-oL-jd6" id="Qy0-76-GCT"/>
                         <outlet property="reviewStar1ImageView" destination="fiY-MU-37A" id="EdA-b7-Ak4"/>

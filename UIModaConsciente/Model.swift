@@ -87,3 +87,42 @@ class LastReview {
     }
     
 }
+
+class NextItem {
+    private let fraseDefaults = "FraseItem"
+    private let imageDefaults = "ImagemItem"
+    private let brandDefaults = "MarcaItem"
+    private let clothDefaults = "MaterialItem"
+    
+    private var frase = ""
+    private var image = ""
+    private var marca = ""
+    private var material = ""
+    
+    init() {
+        frase = (UserDefaults.standard.string(forKey: fraseDefaults) ?? "")
+        image = (UserDefaults.standard.string(forKey: imageDefaults) ?? "")
+        marca = (UserDefaults.standard.string(forKey: brandDefaults) ?? "")
+        material = (UserDefaults.standard.string(forKey: clothDefaults) ?? "")
+    }
+    
+    func setNextItem(phrase: String, image: String, brand: String, cloth: String) {
+        self.frase = phrase
+        self.image = image
+        self.marca = brand
+        self.material = cloth
+        
+        UserDefaults.standard.setValue(self.frase, forKey: fraseDefaults)
+        UserDefaults.standard.set(self.image, forKey: imageDefaults)
+        UserDefaults.standard.set(self.marca, forKey: brandDefaults)
+        UserDefaults.standard.set(self.material, forKey: clothDefaults)
+    }
+    
+    func getNextItem() -> (phrase: String, image: String, brand: String, cloth: String)? {
+        if marca == "" {
+            return nil
+        }
+        
+        return (frase, image, marca, material)
+    }
+}

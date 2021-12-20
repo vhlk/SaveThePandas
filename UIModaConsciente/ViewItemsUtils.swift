@@ -71,4 +71,56 @@ class Utils {
             estrela5Button.setImage(UIImage(named: emptyStar), for :.normal)
         }
     }
+    
+    enum TypeOfBrand:String {
+        case zara = "Zar"
+        case riachuelo = "Riachuelo"
+        case mash = "Mash"
+        case reserva = "Reserva"
+        case mOfficer = "M. Officer"
+    }
+    
+    static func brand2Value(brand:TypeOfBrand) -> Int? {
+        switch brand {
+        case .zara:
+            return 1
+        case .riachuelo:
+            return 1
+        case .mash:
+            return 5
+        case .reserva:
+            return 4
+        case .mOfficer:
+            return 3
+        }
+    }
+    
+    enum TypeOfCloth:String {
+        case algodao = "Algodão"
+        case poliester = "Poliéster"
+        case algodaoOrganico = "Algodão Orgânico"
+        case seda = "Seda"
+        case la = "Lã"
+        case linho = "Linho"
+        case denim = "Denim"
+    }
+    
+    static func cloth2Value(cloth:TypeOfCloth) -> Int? {
+        switch cloth {
+        case .algodao:
+            return 4
+        case .poliester:
+            return 3
+        case .algodaoOrganico:
+            return 5
+        case .seda:
+            return 5
+        case .la:
+            return 2
+        case .linho:
+            return 5
+        case .denim:
+            return 1
+        }
+    }
 }

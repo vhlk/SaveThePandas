@@ -29,6 +29,18 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var reviewStar5Button: UIButton!
     var numSelectedReviews = 0
     
+    @IBOutlet weak var itemPhrase: UILabel!
+    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var itemTree1: UIImageView!
+    @IBOutlet weak var itemTree2: UIImageView!
+    @IBOutlet weak var itemTree3: UIImageView!
+    @IBOutlet weak var itemTree4: UIImageView!
+    @IBOutlet weak var itemTree5: UIImageView!
+    @IBOutlet weak var itemTreePhrase: UIImageView!
+    @IBOutlet weak var itemBrandLabel: UILabel!
+    @IBOutlet weak var itemBrandEmoti: UIImageView!
+    @IBOutlet weak var itemMaterialLabel: UILabel!
+    @IBOutlet weak var itemMateralEmoti: UIImageView!
     
     @IBAction func set1StarReview(_ sender: Any) {
         numSelectedReviews = 1
@@ -57,7 +69,15 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        LoadData()
+        loadCollectionViewData()
+        loadItemData()
+    }
+    
+    func loadItemData() {
+        let nextItem = NextItem()
+        if let (frase, image, marca, material) = nextItem.getNextItem() {
+            
+        }
     }
     
     override func viewDidLoad() {
@@ -69,10 +89,10 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
     }
     
     @objc func NewLastReview(_ notification: Notification) {
-        LoadData()
+        loadCollectionViewData()
     }
     
-    func LoadData() {
+    func loadCollectionViewData() {
         let reviewsDatabase = ReviewsDatabase()
         
         (names, reviews, reviewsStars, rostos) = reviewsDatabase.getAllReviews()
