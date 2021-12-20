@@ -179,13 +179,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="88A-SB-shp">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="TDh-6H-tOT">
-                            <button key="customView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" id="HDq-Ub-sxQ">
-                                <rect key="frame" x="-37" y="-17" width="92" height="33"/>
+                            <button key="customView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" id="HDq-Ub-sxQ">
+                                <rect key="frame" x="20" y="2.5" width="192.5" height="39.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.34114908300000002" green="0.6751581566" blue="0.3479317093" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="SaveThePandas">
-                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
                                 </buttonConfiguration>
                             </button>
                         </barButtonItem>
