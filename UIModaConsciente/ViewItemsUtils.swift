@@ -72,6 +72,35 @@ class Utils {
         }
     }
     
+    static func setTreesByValue(tree1: UIImageView, tree2: UIImageView, tree3: UIImageView, tree4: UIImageView, tree5: UIImageView, value: Double) {
+        
+        if (value > 0.5) {
+            tree1.isHidden = false
+        } else {
+            tree1.isHidden = true
+        }
+        if (value > 1.5) {
+            tree2.isHidden = false
+        } else {
+            tree2.isHidden = true
+        }
+        if (value > 2.5) {
+            tree3.isHidden = false
+        } else {
+            tree3.isHidden = true
+        }
+        if (value > 3.5) {
+            tree4.isHidden = false
+        } else {
+            tree4.isHidden = true
+        }
+        if (value > 4.5) {
+            tree5.isHidden = false
+        } else {
+            tree5.isHidden = true
+        }
+    }
+    
     enum TypeOfBrand:String {
         case zara = "Zara"
         case riachuelo = "Riachuelo"
@@ -80,7 +109,7 @@ class Utils {
         case mOfficer = "M. Officer"
     }
     
-    static func brand2Value(brand:TypeOfBrand) -> Int? {
+    static func brand2Value(brand:TypeOfBrand) -> Int {
         switch brand {
         case .zara:
             return 1
@@ -105,7 +134,7 @@ class Utils {
         case denim = "Denim"
     }
     
-    static func cloth2Value(cloth:TypeOfCloth) -> Int? {
+    static func cloth2Value(cloth:TypeOfCloth) -> Int {
         switch cloth {
         case .algodao:
             return 4
