@@ -50,11 +50,14 @@ class ViewAllReviewViewController: UIViewController, UICollectionViewDataSource 
         
         (names, reviews, reviewsStars, rostos) = reviewsDatabase.getReviewsById(id: itemId)
         
-        let mean = reviewsDatabase.getStarsMeanById(id: itemId)
-        
-        setStarsByValue(star1: star1, star2: star2, star3: star3, star4: star4, star5: star5, value: mean)
-        
-        meanLabel.text = String(format: "%.1f", mean)
+        if reviewsStars.isEmpty {
+            meanLabel.text = String(format: "%.1f", 0.0)
+            Utils.setStarsByValue(star1: star1, star2: star2, star3: star3, star4: star4, star5: star5, value: 0.0)
+        } else {
+            let mean = reviewsDatabase.getStarsMeanById(id: itemId)
+            meanLabel.text = String(format: "%.1f", mean)
+            Utils.setStarsByValue(star1: star1, star2: star2, star3: star3, star4: star4, star5: star5, value: mean)
+        }
         
         numOfReviews = names.count
         
@@ -78,41 +81,8 @@ class ViewAllReviewViewController: UIViewController, UICollectionViewDataSource 
         
         reviewCollectionViewCell.rostoImageView.image = UIImage(named: rostos[indexPath.row])
         
-        setStarsByValue(star1: reviewCollectionViewCell.estrela1ImageView, star2: reviewCollectionViewCell.estrela2ImageView, star3: reviewCollectionViewCell.estrela3ImageView, star4: reviewCollectionViewCell.estrela4ImageView, star5: reviewCollectionViewCell.estrela5ImageView, value: Double(reviewsStars[indexPath.row]))
+        Utils.setStarsByValue(star1: reviewCollectionViewCell.estrela1ImageView, star2: reviewCollectionViewCell.estrela2ImageView, star3: reviewCollectionViewCell.estrela3ImageView, star4: reviewCollectionViewCell.estrela4ImageView, star5: reviewCollectionViewCell.estrela5ImageView, value: Double(reviewsStars[indexPath.row]))
         
         return reviewCollectionViewCell
     }
-    
-    func setStarsByValue(star1: UIImageView, star2: UIImageView, star3: UIImageView, star4: UIImageView, star5: UIImageView, value: Double) {
-        
-        let golderStar = "VectorEstrelinhaHiRes"
-        let emptyStar = "VectorEstrelinhaVaziaHiRes"
-        
-        if (value > 0) {
-            star1.image = UIImage(named: golderStar)
-        } else {
-            star1.image = UIImage(named: emptyStar)
-        }
-        if (value > 1) {
-            star2.image = UIImage(named: golderStar)
-        } else {
-            star2.image = UIImage(named: emptyStar)
-        }
-        if (value > 2) {
-            star3.image = UIImage(named: golderStar)
-        } else {
-            star3.image = UIImage(named: emptyStar)
-        }
-        if (value > 3) {
-            star4.image = UIImage(named: golderStar)
-        } else {
-            star4.image = UIImage(named: emptyStar)
-        }
-        if (value > 4) {
-            star5.image = UIImage(named: golderStar)
-        } else {
-            star5.image = UIImage(named: emptyStar)
-        }
-    }
-
 }

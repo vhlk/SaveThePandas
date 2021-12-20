@@ -499,7 +499,7 @@ que a média da categoria.</string>
                         <outlet property="itemTreePhrase" destination="5lB-DM-TGQ" id="8Nd-pD-7xB"/>
                         <outlet property="reviewMeanLabel" destination="B8a-f3-pqW" id="4Cx-Z4-XPS"/>
                         <outlet property="reviewStar1Button" destination="Nia-oL-jd6" id="Qy0-76-GCT"/>
-                        <outlet property="reviewStar1ImageView" destination="fiY-MU-37A" id="EdA-b7-Ak4"/>
+                        <outlet property="reviewStar1ImageView" destination="1ww-4c-FOS" id="Ar2-LA-Ffb"/>
                         <outlet property="reviewStar2Button" destination="DPS-MT-NUB" id="nhf-yj-tBB"/>
                         <outlet property="reviewStar2ImageView" destination="fiY-MU-37A" id="bdQ-GO-oWy"/>
                         <outlet property="reviewStar3Button" destination="lbJ-tO-3yL" id="BF2-za-yZD"/>

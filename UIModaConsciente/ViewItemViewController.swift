@@ -113,14 +113,15 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
         let reviewsDatabase = ReviewsDatabase()
         
         (names, reviews, reviewsStars, rostos) = reviewsDatabase.getReviewsById(id: itemId)
-        print("item id: \(itemId)")
-        print("names: \(names)")
         
-        let mean = reviewsDatabase.getStarsMeanById(id: itemId)
-        
-        Utils.setStarsByValue(star1: reviewStar1ImageView, star2: reviewStar2ImageView, star3: reviewStar3ImageView, star4: reviewStar4ImageView, star5: reviewStar5ImageView, value: mean)
-        
-        reviewMeanLabel.text = String(format: "%.1f", mean)
+        if reviewsStars.isEmpty {
+            reviewMeanLabel.text = String(format: "%.1f", 0.0)
+            Utils.setStarsByValue(star1: reviewStar1ImageView, star2: reviewStar2ImageView, star3: reviewStar3ImageView, star4: reviewStar4ImageView, star5: reviewStar5ImageView, value: 0.0)
+        } else {
+            let mean = reviewsDatabase.getStarsMeanById(id: itemId)
+            reviewMeanLabel.text = String(format: "%.1f", mean)
+            Utils.setStarsByValue(star1: reviewStar1ImageView, star2: reviewStar2ImageView, star3: reviewStar3ImageView, star4: reviewStar4ImageView, star5: reviewStar5ImageView, value: mean)
+        }
         
         numOfReviews = names.count
         
