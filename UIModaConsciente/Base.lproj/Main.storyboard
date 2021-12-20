@@ -563,7 +563,7 @@ que a média da categoria.</string>
         <!--Pop Up View Controller-->
         <scene sceneID="5fA-YT-UfK">
             <objects>
-                <viewController storyboardIdentifier="Bilola" modalPresentationStyle="overCurrentContext" id="fO9-eJ-6i2" customClass="PopUpViewController" customModule="UIModaConsciente" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MakeReviewScrenID" modalPresentationStyle="overCurrentContext" id="fO9-eJ-6i2" customClass="PopUpViewController" customModule="UIModaConsciente" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" id="NoF-PI-TmU">
                         <rect key="frame" x="0.0" y="0.0" width="392" height="415"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -772,11 +772,22 @@ que a média da categoria.</string>
                         <outlet property="Estrela4Button" destination="82E-kT-lTn" id="fU8-qT-rBT"/>
                         <outlet property="Estrela5Button" destination="nC4-4m-FjJ" id="adB-rj-0xe"/>
                         <outlet property="NomeField" destination="vDd-eh-4wJ" id="64c-Dl-LlD"/>
+                        <segue destination="8rV-RS-cN7" kind="show" identifier="GoBack" id="1i6-VO-FUX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwX-el-aS5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3091.304347826087" y="136.27232142857142"/>
+        </scene>
+        <!--ViewAllItemsStoryboardID-->
+        <scene sceneID="ptz-qW-MvA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TelaItem" referencedIdentifier="ViewAllItemsStoryboardID" id="8rV-RS-cN7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kbU-DG-YpP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPW-hb-KPA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3858" y="137"/>
         </scene>
     </scenes>
     <resources>

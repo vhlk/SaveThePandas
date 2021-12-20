@@ -35,17 +35,18 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
         reviewMeanLabel.text = String(format: "%.1f", mean)
         
         numOfReviews = names.count
+        
+        self.reviewsCollectionView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         reviewsCollectionView.dataSource = self
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return numOfReviews
+        return min(5, numOfReviews)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

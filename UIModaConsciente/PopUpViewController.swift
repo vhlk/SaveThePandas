@@ -13,6 +13,7 @@ class PopUpViewController: UIViewController {
     
     var numOfStars = 0
     
+    var onDoneBlock : ((Bool) -> Void)?
     
     @IBAction func Click1Star(_ sender: Any) {
         setStarsByValue(value: 1)
@@ -105,11 +106,12 @@ class PopUpViewController: UIViewController {
             
             let messageVC = UIAlertController(title: "Avaliação salva", message: "Avaliação salva com sucesso" , preferredStyle: .actionSheet)
             present(messageVC, animated: true) {
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "NewReview"), object: nil)
                 Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (_) in
                                 messageVC.dismiss(animated: true, completion: nil)}
                 )
                 Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (_) in
-                    self.dismiss(animated: true, completion: nil)}
+                    self.dismiss(animated: true)}
                 )
             }
         }

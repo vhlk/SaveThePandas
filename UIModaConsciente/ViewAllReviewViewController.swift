@@ -30,6 +30,16 @@ class ViewAllReviewViewController: UIViewController, UICollectionViewDataSource 
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        reloadCollectionViewData()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(NewReview(_:)), name: Notification.Name(rawValue: "NewReview"), object: nil)
+    }
+    
+    @objc func NewReview(_ notification: Notification) {
+        reloadCollectionViewData()
+    }
+    
+    func reloadCollectionViewData() {
         let reviewsDatabase = ReviewsDatabase()
         
         (names, reviews, reviewsStars, rostos) = reviewsDatabase.getAllReviews()
@@ -41,6 +51,8 @@ class ViewAllReviewViewController: UIViewController, UICollectionViewDataSource 
         meanLabel.text = String(format: "%.1f", mean)
         
         numOfReviews = names.count
+        
+        self.reviewsCollectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -48,7 +60,7 @@ class ViewAllReviewViewController: UIViewController, UICollectionViewDataSource 
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 5
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

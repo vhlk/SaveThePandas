@@ -26,10 +26,10 @@ class ReviewsDatabase {
     }
     
     func addReview(usrName: String, review: String, stars: Int, usrPhotoName: String) {
-        self.names.append(usrName)
-        self.reviews.append(review)
-        self.stars.append(stars)
-        self.faces.append(usrPhotoName)
+        self.names.insert(usrName, at: 0)
+        self.reviews.insert(review, at: 0)
+        self.stars.insert(stars, at: 0)
+        self.faces.insert(usrPhotoName, at: 0)
         
         UserDefaults.standard.setValue(self.names, forKey: namesDefaults)
         UserDefaults.standard.set(self.reviews, forKey: reviewsDefaults)

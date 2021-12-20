@@ -301,16 +301,16 @@ abrigados com essa compra!</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reviewCell" id="bpV-fk-EEY" customClass="ReviewsCollectionViewCell" customModule="UIModaConsciente" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="reviewCell" id="bpV-fk-EEY" customClass="ReviewsCollectionViewCell" customModule="UIModaConsciente" customModuleProvider="target">
                                         <rect key="frame" x="3" y="0.0" width="355" height="108"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2gM-42-CV0">
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="2gM-42-CV0">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="108"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9yB-aA-etr" userLabel="ReviewView">
+                                                <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9yB-aA-etr" userLabel="ReviewView">
                                                     <rect key="frame" x="28" y="2" width="334" height="106"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 5" translatesAutoresizingMaskIntoConstraints="NO" id="9Iz-OO-d5Q">
                                                             <rect key="frame" x="-29" y="0.0" width="355" height="104"/>
@@ -320,9 +320,9 @@ abrigados com essa compra!</string>
                                                             <rect key="frame" x="-21" y="20" width="53" height="65"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Review" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvQ-2N-Et2" userLabel="ReviewTextView">
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" editable="NO" text="Review" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvQ-2N-Et2" userLabel="ReviewTextView">
                                                             <rect key="frame" x="40" y="35" width="286" height="69"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                             <color key="textColor" systemColor="labelColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -444,10 +444,10 @@ abrigados com essa compra!</string>
             </objects>
             <point key="canvasLocation" x="4188.4057971014499" y="-597.32142857142856"/>
         </scene>
-        <!--Bilola-->
+        <!--MakeReviewScrenID-->
         <scene sceneID="mxz-rY-cVx">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Bilola" id="I8d-hw-cwR" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MakeReviewScrenID" id="I8d-hw-cwR" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="sGL-Mo-E0s"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ar-Qi-3B6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
