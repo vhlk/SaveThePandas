@@ -60,11 +60,13 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             let Ellipse = "Ellipse 2"
             let brandName = recentData[indexPath.row].name
             let clothType = recentData[indexPath.row].cloth
+            let typeImage = recentData[indexPath.row].type
             recentCollectionViewCell.Ellipse.image = UIImage(named: Ellipse)
             recentCollectionViewCell.RecentClotheType.text = recentData[indexPath.row].type
             recentCollectionViewCell.RecentClotheBrand.text = brandName
             recentCollectionViewCell.brand = Utils.TypeOfBrand(rawValue: brandName) ?? Utils.TypeOfBrand.mash
             recentCollectionViewCell.cloth = Utils.TypeOfCloth(rawValue: clothType) ?? Utils.TypeOfCloth.poliester
+            recentCollectionViewCell.image = typeImage
             var icon = ""
             
             switch recentData[indexPath.row].type

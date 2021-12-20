@@ -9,9 +9,8 @@ import UIKit
 
 class RecentCollectionViewCell: UICollectionViewCell {
     
-    var phrase = "Os bichos preguiça continuarão abrigados com essa compra!"
     var image = "Camisa"
-    var brand = Utils.TypeOfBrand.riachuelo
+    var brand = Utils.TypeOfBrand.mash
     var cloth = Utils.TypeOfCloth.algodao
     
     @IBOutlet weak var Ellipse: UIImageView!
@@ -22,7 +21,7 @@ class RecentCollectionViewCell: UICollectionViewCell {
     var functionSegue : (()->())?
     @IBAction func recentButton(_ sender: UIButton) {
         let nextItem = NextItem()
-        nextItem.setNextItem(phrase: phrase, image: image, brand: brand, cloth: cloth)
+        nextItem.setNextItem(image: image, brand: brand, cloth: cloth)
         
         functionSegue?()
     }
