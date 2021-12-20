@@ -83,6 +83,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         recentData = DataLoader().recentClothe
         newsData = DataLoader().newsArticle
         
@@ -91,6 +92,16 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         newsViewController.dataSource = self
         recentViewController.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+            super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        super.viewWillDisappear(animated)
     }
     
 }
