@@ -11,6 +11,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     @IBOutlet weak var recentViewController: UICollectionView!
     @IBOutlet weak var newsViewController: UICollectionView!
+    @IBOutlet weak var openCameraButton: UIButton!
     
     var newsData = [NewsArticle]();
     var recentData = [RecentClothe]();
@@ -106,6 +107,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         newsViewController.dataSource = self
         recentViewController.dataSource = self
+        
+        openCameraButton.titleLabel?.textAlignment = .center
     }
     
     override func viewWillAppear(_ animated: Bool) {
