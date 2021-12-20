@@ -45,3 +45,45 @@ class ReviewsDatabase {
         return Double(stars.reduce(0, +)) / Double(stars.count)
     }
 }
+
+class LastReview {
+    private let nameDefaults = "LastName"
+    private let reviewDefaults = "LastReview"
+    private let reviewStarsDefaults = "LastStars"
+    private let faceDefaults = "LastFace"
+    
+    private var name = ""
+    private var review = ""
+    private var star = 0
+    private var face = ""
+    
+    init() {
+        name = (UserDefaults.standard.string(forKey: nameDefaults) ?? "")
+        review = (UserDefaults.standard.string(forKey: reviewDefaults) ?? "")
+        star = (UserDefaults.standard.integer(forKey: reviewStarsDefaults))
+        face = (UserDefaults.standard.string(forKey: faceDefaults) ?? "")
+    }
+    
+    func getLastReview() -> (String, String, Int, String)?
+    {
+        if name == "" {
+            return nil
+        }
+        
+        return (name, review, star, face)
+    }
+    
+    func setLastReview(name:String, review:String, star:Int, face:String)
+    {
+        self.name = name
+        self.review = review
+        self.star = star
+        self.face = face
+        
+        UserDefaults.standard.setValue(self.name, forKey: nameDefaults)
+        UserDefaults.standard.set(self.review, forKey: reviewDefaults)
+        UserDefaults.standard.set(self.star, forKey: reviewStarsDefaults)
+        UserDefaults.standard.set(self.face, forKey: faceDefaults)
+    }
+    
+}

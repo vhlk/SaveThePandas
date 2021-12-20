@@ -13,8 +13,6 @@ class PopUpViewController: UIViewController {
     
     var numOfStars = 0
     
-    var onDoneBlock : ((Bool) -> Void)?
-    
     @IBAction func Click1Star(_ sender: Any) {
         setStarsByValue(value: 1)
     }
@@ -37,36 +35,22 @@ class PopUpViewController: UIViewController {
         setStarsByValue(value: 5)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let lastReview = LastReview()
+        
+        if let (name, review, _, _) = lastReview.getLastReview() {
+            NomeField.text = name
+            DescricaoField.text = review
+        }
+    }
+    
+    override func viewDidLoad() {
+        Utils.setButtonStarsByValue(estrela1Button: Estrela1Button, estrela2Button: Estrela2Button, estrela3Button: Estrela3Button, estrela4Button: Estrela4Button, estrela5Button: Estrela5Button, value: Double(numOfStars))
+    }
+    
     func setStarsByValue(value: Double) {
         
-        let golderStar = "VectorEstrelinhaHiRes"
-        let emptyStar = "VectorEstrelinhaVaziaHiRes"
-        
-        if (value > 0.5) {
-            Estrela1Button.setImage(UIImage(named: golderStar), for :.normal)
-        } else {
-            Estrela1Button.setImage(UIImage(named: emptyStar), for :.normal)
-        }
-        if (value > 1.5) {
-            Estrela2Button.setImage(UIImage(named: golderStar), for :.normal)
-        } else {
-            Estrela2Button.setImage(UIImage(named: emptyStar), for :.normal)
-        }
-        if (value > 2.5) {
-            Estrela3Button.setImage(UIImage(named: golderStar), for :.normal)
-        } else {
-            Estrela3Button.setImage(UIImage(named: emptyStar), for :.normal)
-        }
-        if (value > 3.5) {
-            Estrela4Button.setImage(UIImage(named: golderStar), for :.normal)
-        } else {
-            Estrela4Button.setImage(UIImage(named: emptyStar), for :.normal)
-        }
-        if (value > 4.5) {
-            Estrela5Button.setImage(UIImage(named: golderStar), for :.normal)
-        } else {
-            Estrela5Button.setImage(UIImage(named: emptyStar), for :.normal)
-        }
+        Utils.setButtonStarsByValue(estrela1Button: Estrela1Button, estrela2Button: Estrela2Button, estrela3Button: Estrela3Button, estrela4Button: Estrela4Button, estrela5Button: Estrela5Button, value: value)
         
         numOfStars = Int(value)
     }
@@ -103,6 +87,9 @@ class PopUpViewController: UIViewController {
             let randomInt = Int.random(in: 0..<2)
             
             reviewsDatabase.addReview(usrName: NomeField.text!, review: DescricaoField.text!, stars: numOfStars, usrPhotoName: photos[randomInt])
+            
+            let lastReview = LastReview()
+            lastReview.setLastReview(name: NomeField.text!, review: DescricaoField.text!, star: numOfStars, face: photos[randomInt])
             
             let messageVC = UIAlertController(title: "Avaliação salva", message: "Avaliação salva com sucesso" , preferredStyle: .actionSheet)
             present(messageVC, animated: true) {

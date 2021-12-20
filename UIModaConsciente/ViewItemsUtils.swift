@@ -40,4 +40,35 @@ class Utils {
             star5.image = UIImage(named: emptyStar)
         }
     }
+    
+    static func setButtonStarsByValue(estrela1Button:UIButton, estrela2Button:UIButton, estrela3Button:UIButton, estrela4Button:UIButton, estrela5Button:UIButton, value: Double) {
+        let golderStar = "VectorEstrelinhaHiRes"
+        let emptyStar = "VectorEstrelinhaVaziaHiRes"
+        
+        if (value > 0.5) {
+            estrela1Button.setImage(UIImage(named: golderStar), for :.normal)
+        } else {
+            estrela1Button.setImage(UIImage(named: emptyStar), for :.normal)
+        }
+        if (value > 1.5) {
+            estrela2Button.setImage(UIImage(named: golderStar), for :.normal)
+        } else {
+            estrela2Button.setImage(UIImage(named: emptyStar), for :.normal)
+        }
+        if (value > 2.5) {
+            estrela3Button.setImage(UIImage(named: golderStar), for :.normal)
+        } else {
+            estrela3Button.setImage(UIImage(named: emptyStar), for :.normal)
+        }
+        if (value > 3.5) {
+            estrela4Button.setImage(UIImage(named: golderStar), for :.normal)
+        } else {
+            estrela4Button.setImage(UIImage(named: emptyStar), for :.normal)
+        }
+        if (value > 4.5) {
+            estrela5Button.setImage(UIImage(named: golderStar), for :.normal)
+        } else {
+            estrela5Button.setImage(UIImage(named: emptyStar), for :.normal)
+        }
+    }
 }
