@@ -129,47 +129,48 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="400" height="130"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQO-zy-88Z">
-                                                            <rect key="frame" x="8" y="0.0" width="384" height="128"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp_image_2021-04-08_at_11.21.37 1" id="Yfj-MO-TK4">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="128"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artistas investem em moda sustentável e consciente" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYY-MA-2Kn" customClass="PaddingLabel" customModule="UIModaConsciente" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="78" width="384" height="50"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                                    <color key="backgroundColor" systemColor="secondaryLabelColor"/>
-                                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="13"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
-                                                                            <real key="value" value="10"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
-                                                                            <real key="value" value="10"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                    </userDefinedRuntimeAttributes>
-                                                                </label>
-                                                            </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        </view>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news1" id="Yfj-MO-TK4">
+                                                            <rect key="frame" x="8" y="1" width="384" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                            <gestureRecognizers/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artistas investem em moda sustentável e consciente" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYY-MA-2Kn" customClass="PaddingLabel" customModule="UIModaConsciente" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="79" width="384" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="13"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wi2-5a-so3">
+                                                            <rect key="frame" x="8" y="1" width="384" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain"/>
+                                                            <connections>
+                                                                <action selector="newsButton:" destination="dhx-Rm-QV6" eventType="touchUpInside" id="Prb-Fn-0nU"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="QQO-zy-88Z" firstAttribute="leading" secondItem="Mhd-wg-bkm" secondAttribute="leading" constant="10" id="7mk-3w-ymQ"/>
-                                                        <constraint firstAttribute="trailing" secondItem="QQO-zy-88Z" secondAttribute="trailing" constant="8" id="LnB-5f-gDW"/>
-                                                        <constraint firstAttribute="trailing" secondItem="QQO-zy-88Z" secondAttribute="trailing" constant="10" id="Oij-Lx-bSi"/>
-                                                        <constraint firstItem="QQO-zy-88Z" firstAttribute="leading" secondItem="Mhd-wg-bkm" secondAttribute="leading" constant="8" id="a1W-CX-NtW"/>
-                                                        <constraint firstItem="QQO-zy-88Z" firstAttribute="leading" secondItem="Mhd-wg-bkm" secondAttribute="leading" constant="8" id="lhV-SK-SHd"/>
-                                                        <constraint firstAttribute="trailing" secondItem="QQO-zy-88Z" secondAttribute="trailing" constant="8" id="sIn-8u-d3w"/>
-                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </collectionViewCellContentView>
+                                                <gestureRecognizers/>
                                                 <size key="customSize" width="400" height="130"/>
                                                 <connections>
                                                     <outlet property="newsImage" destination="Yfj-MO-TK4" id="agi-Hf-Zfx"/>
                                                     <outlet property="newsLabel" destination="ZYY-MA-2Kn" id="zTt-wT-c6Q"/>
-                                                    <outlet property="newsView" destination="QQO-zy-88Z" id="gG0-mX-fuB"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -182,7 +183,7 @@
                                             <imageReference key="image" image="camera" catalog="system" symbolScale="large"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
+                                            <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="openCamera:" destination="Y6W-OH-hqX" eventType="touchDown" id="yI1-nk-xDe"/>
@@ -215,218 +216,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsO-8Q-y2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1801" y="528"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="4ho-YM-73T">
-            <objects>
-                <viewController id="jyv-Fr-s3f" customClass="HomeViewController" customModule="UIModaConsciente" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="k6a-9W-Jvq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Recentes" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkI-YH-bg7">
-                                <rect key="frame" x="10" y="132" width="102" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 2" translatesAutoresizingMaskIntoConstraints="NO" id="3kf-pD-eeo">
-                                <rect key="frame" x="-12" y="185" width="147" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 2" translatesAutoresizingMaskIntoConstraints="NO" id="5RT-DT-ZUi">
-                                <rect key="frame" x="181" y="185" width="147" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 2" translatesAutoresizingMaskIntoConstraints="NO" id="R0s-8o-v86">
-                                <rect key="frame" x="83" y="185" width="147" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 2" translatesAutoresizingMaskIntoConstraints="NO" id="aap-ru-fok">
-                                <rect key="frame" x="275" y="185" width="147" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon - camisa" translatesAutoresizingMaskIntoConstraints="NO" id="0go-h6-pd8">
-                                <rect key="frame" x="29" y="192" width="65" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon - camisa" translatesAutoresizingMaskIntoConstraints="NO" id="8JT-Kz-OMS">
-                                <rect key="frame" x="124" y="192" width="65" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon - calca" translatesAutoresizingMaskIntoConstraints="NO" id="w3a-lT-oil">
-                                <rect key="frame" x="222" y="192" width="65" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon - saia" translatesAutoresizingMaskIntoConstraints="NO" id="5XW-6m-HUP">
-                                <rect key="frame" x="316" y="192" width="65" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C3p-Y2-rbJ">
-                                <rect key="frame" x="20" y="268" width="83" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Camisa
-Riachuelo</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aFZ-g2-zxy">
-                                <rect key="frame" x="115" y="268" width="83" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Camisa
-M. Officer</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SBs-ch-orf">
-                                <rect key="frame" x="213" y="268" width="83" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Calça
-Zara</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xMU-be-Wc7">
-                                <rect key="frame" x="307" y="268" width="83" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Saia
-Mash</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Notícias" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8n-R7-HGb">
-                                <rect key="frame" x="16" y="355" width="90" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jc0-ZM-tbn">
-                                <rect key="frame" x="29" y="408" width="352" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="whatsapp_image_2021-04-08_at_11.21.37 1" translatesAutoresizingMaskIntoConstraints="NO" id="8CM-mN-RBE">
-                                        <rect key="frame" x="-11" y="0.0" width="373" height="134"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="352" id="bso-oO-jcs"/>
-                                            <constraint firstAttribute="height" constant="128" id="hGW-b0-akp"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Artistas investem em moda sustentável e consciente" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pf9-PR-T5G">
-                                        <rect key="frame" x="0.0" y="85" width="352" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" link="YES" image="YES"/>
-                                </accessibility>
-                            </view>
-                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UlT-1N-VLq">
-                                <rect key="frame" x="29" y="552" width="352" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="image 7" translatesAutoresizingMaskIntoConstraints="NO" id="wcv-6x-5sd">
-                                        <rect key="frame" x="-3" y="0.0" width="360" height="133"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="Bmn-om-fr5"/>
-                                            <constraint firstAttribute="width" constant="352" id="if8-oQ-Ofb"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Mais de 35 marcas de moda estão envolvidas com trabalho escravo no Brasil" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4t-0E-4D4">
-                                        <rect key="frame" x="5" y="79" width="347" height="49"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" link="YES" image="YES"/>
-                                </accessibility>
-                            </view>
-                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="esI-Q6-gga">
-                                <rect key="frame" x="28" y="697" width="353" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 18" translatesAutoresizingMaskIntoConstraints="NO" id="VYz-du-DA5">
-                                        <rect key="frame" x="-5" y="0.0" width="358" height="123"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="10 brechós em Brasília para comprar roupa barata e praticar a moda consciente" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDD-Pi-cj7">
-                                        <rect key="frame" x="0.0" y="78" width="354" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" link="YES" image="YES"/>
-                                </accessibility>
-                            </view>
-                            <view alpha="0.5" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xsf-ER-OYK">
-                                <rect key="frame" x="29" y="843" width="352" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" link="YES" image="YES"/>
-                                </accessibility>
-                            </view>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7o-TV-jZP">
-                                <rect key="frame" x="113" y="797" width="183" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" image="Cam Icon" title="Avaliar peça" imagePadding="0.0">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="cameraButtonClicked:" destination="jyv-Fr-s3f" eventType="touchUpInside" id="9bB-sw-Bgv"/>
-                                </connections>
-                            </button>
-                            <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="Buscar roupa recente" translatesAutoresizingMaskIntoConstraints="NO" id="eym-IL-ET1">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="QvJ-Hp-ZZe"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Home" id="gFm-cQ-oYy"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dDD-A2-Orh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3726.0869565217395" y="-11.383928571428571"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="euh-PS-Zpt">
-            <objects>
-                <viewControllerPlaceholder id="L5a-Bd-SD2" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="637-IG-bHu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="286" y="-341"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5hM-sr-qcq">
@@ -511,22 +300,17 @@ Mash</string>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="HVk-b0-KWg"/>
+        <segue reference="XoC-9x-Nmb"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Cam Icon" width="61" height="51"/>
         <image name="Ellipse 2" width="204" height="204"/>
         <image name="Ellipse 6" width="47" height="47"/>
         <image name="Ellipse 7" width="71" height="71"/>
-        <image name="Rectangle 18" width="1014" height="396"/>
         <image name="Rectangle 22" width="281" height="315"/>
         <image name="camera" catalog="system" width="128" height="94"/>
-        <image name="icon - calca" width="126" height="126"/>
         <image name="icon - camisa" width="48" height="48"/>
-        <image name="icon - saia" width="144" height="144"/>
         <image name="image 6" width="375" height="667"/>
-        <image name="image 7" width="1014" height="396"/>
-        <image name="whatsapp_image_2021-04-08_at_11.21.37 1" width="1014" height="396"/>
+        <image name="news1" width="620" height="480"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

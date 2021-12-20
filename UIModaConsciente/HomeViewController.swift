@@ -18,7 +18,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     @IBAction func openCamera(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                var imagePicker = UIImagePickerController()
+            let imagePicker = UIImagePickerController()
                 imagePicker.delegate = self
                 imagePicker.sourceType = .camera;
                 imagePicker.allowsEditing = false
@@ -49,7 +49,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             let imageName = newsData[indexPath.row].image
             newsCollectionViewCell.newsImage.image = UIImage(named: imageName)
             newsCollectionViewCell.newsLabel.text = newsData[indexPath.row].title
-            
+            newsCollectionViewCell.newsLink = newsData[indexPath.row].link
+        
             return newsCollectionViewCell
         } else {
             let recentCollectionViewCell = recentViewController.dequeueReusableCell(withReuseIdentifier: "RecentCell", for: indexPath) as! RecentCollectionViewCell
@@ -80,8 +81,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         recentData = DataLoader().recentClothe
@@ -92,24 +91,25 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         newsViewController.dataSource = self
         recentViewController.dataSource = self
-        
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 384, height: 130)
+    }
+}
+
+@IBDesignable extension UIView {
+    @IBInspectable var cornerRadius: CGFloat {
+        get { return layer.cornerRadius }
+        set {
+              layer.cornerRadius = newValue
+ 
+              // If masksToBounds is true, subviews will be
+              // clipped to the rounded corners.
+              layer.masksToBounds = (newValue > 0)
+        }
     }
 }
