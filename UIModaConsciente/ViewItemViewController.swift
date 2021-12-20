@@ -80,7 +80,7 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
             itemBrandLabel.text = "Marca: \(marca.rawValue)"
             itemMaterialLabel.text = "Material: \(material.rawValue)"
             
-            let itemRating = (Utils.brand2Value(brand: marca) + Utils.cloth2Value(cloth: material))/2 // 0 a 5
+            let itemRating = Double(Utils.brand2Value(brand: marca) + Utils.cloth2Value(cloth: material)) / 2.0 // 0 a 5
             
             if (itemRating > 3) {
                 itemPhrase.text = "Os bichos-preguiça continuarão abrigados com essa compra!"
@@ -90,7 +90,7 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
             
             Utils.setTreesByValue(tree1: itemTree1, tree2: itemTree2, tree3: itemTree3, tree4: itemTree4, tree5: itemTree5, value: Double(itemRating))
             
-            itemTreePhrase.text = "Essa peça é \(itemRating*2*10)% mais consciente que a média da categoria."
+            itemTreePhrase.text = "Essa peça é \(Int(itemRating*2*10))% mais consciente que a média da categoria."
         }
     }
     
