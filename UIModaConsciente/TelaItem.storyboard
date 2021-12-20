@@ -72,10 +72,10 @@ que a média da categoria.</string>
                                 <rect key="frame" x="42" y="444" width="341" height="128"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marca: Reserva" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vA7-7M-EA5">
-                                <rect key="frame" x="56" y="500" width="116" height="20"/>
+                                <rect key="frame" x="56" y="500" width="250" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="GFs-Ce-7Ms"/>
-                                    <constraint firstAttribute="width" constant="116" id="c5m-eC-xYb"/>
+                                    <constraint firstAttribute="width" constant="250" id="c5m-eC-xYb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -88,9 +88,9 @@ que a média da categoria.</string>
                                 <rect key="frame" x="322" y="555" width="52" height="30"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Material: Algodão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQF-Bo-QCM">
-                                <rect key="frame" x="56" y="561" width="131" height="21"/>
+                                <rect key="frame" x="56" y="561" width="250" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="131" id="8CO-Dz-TqN"/>
+                                    <constraint firstAttribute="width" constant="250" id="8CO-Dz-TqN"/>
                                     <constraint firstAttribute="height" constant="21" id="wgC-Dh-0SI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
@@ -386,7 +386,6 @@ abrigados com essa compra!</string>
                             <constraint firstItem="Dpa-Gx-sR8" firstAttribute="leading" secondItem="7jd-4C-Wrs" secondAttribute="leading" constant="99" id="Ikd-Je-wWf"/>
                             <constraint firstItem="B8a-f3-pqW" firstAttribute="leading" secondItem="GiD-vL-mqx" secondAttribute="leading" id="JDb-yZ-Wwa"/>
                             <constraint firstItem="vA7-7M-EA5" firstAttribute="top" secondItem="5lB-DM-TGQ" secondAttribute="bottom" constant="16" id="JGh-Ue-zmk"/>
-                            <constraint firstItem="vA7-7M-EA5" firstAttribute="trailing" secondItem="ZCq-Mu-U68" secondAttribute="trailing" id="KW8-Qf-M82"/>
                             <constraint firstItem="Vgl-pY-7YN" firstAttribute="top" secondItem="Z5f-hZ-t8y" secondAttribute="top" id="Kas-mC-jt6"/>
                             <constraint firstItem="Vgl-pY-7YN" firstAttribute="top" secondItem="Dpa-Gx-sR8" secondAttribute="bottom" constant="10" id="L6c-Oq-Ebm"/>
                             <constraint firstItem="5lB-DM-TGQ" firstAttribute="top" secondItem="Vgl-pY-7YN" secondAttribute="bottom" constant="16" id="LFS-cX-2Ty"/>

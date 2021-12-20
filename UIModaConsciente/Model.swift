@@ -106,11 +106,11 @@ class NextItem {
         material = (UserDefaults.standard.string(forKey: clothDefaults) ?? "")
     }
     
-    func setNextItem(phrase: String, image: String, brand: String, cloth: String) {
+    func setNextItem(phrase: String, image: String, brand: Utils.TypeOfBrand, cloth: Utils.TypeOfCloth) {
         self.frase = phrase
         self.image = image
-        self.marca = brand
-        self.material = cloth
+        self.marca = brand.rawValue
+        self.material = cloth.rawValue
         
         UserDefaults.standard.setValue(self.frase, forKey: fraseDefaults)
         UserDefaults.standard.set(self.image, forKey: imageDefaults)
@@ -118,11 +118,14 @@ class NextItem {
         UserDefaults.standard.set(self.material, forKey: clothDefaults)
     }
     
-    func getNextItem() -> (phrase: String, image: String, brand: String, cloth: String)? {
+    func getNextItem() -> (phrase: String, image: String, brand: Utils.TypeOfBrand, cloth: Utils.TypeOfCloth)? {
         if marca == "" {
             return nil
         }
         
-        return (frase, image, marca, material)
+        let brand = Utils.TypeOfBrand(rawValue: marca)!
+        let mater = Utils.TypeOfCloth(rawValue: material)!
+        
+        return (frase, image, brand, mater)
     }
 }
