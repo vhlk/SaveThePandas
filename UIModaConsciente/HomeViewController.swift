@@ -17,6 +17,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     @IBAction func openCamera(_ sender: Any) {
+        let nextItem = NextItem()
+        nextItem.resetNextItem()
+        
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let imagePicker = UIImagePickerController()
                 imagePicker.delegate = self

@@ -89,36 +89,31 @@ class LastReview {
 }
 
 class NextItem {
-    private let fraseDefaults = "FraseItem"
     private let imageDefaults = "ImagemItem"
     private let brandDefaults = "MarcaItem"
     private let clothDefaults = "MaterialItem"
     
-    private var frase = ""
     private var image = ""
     private var marca = ""
     private var material = ""
     
     init() {
-        frase = (UserDefaults.standard.string(forKey: fraseDefaults) ?? "")
         image = (UserDefaults.standard.string(forKey: imageDefaults) ?? "")
         marca = (UserDefaults.standard.string(forKey: brandDefaults) ?? "")
         material = (UserDefaults.standard.string(forKey: clothDefaults) ?? "")
     }
     
-    func setNextItem(phrase: String, image: String, brand: Utils.TypeOfBrand, cloth: Utils.TypeOfCloth) {
-        self.frase = phrase
+    func setNextItem(image: String, brand: Utils.TypeOfBrand, cloth: Utils.TypeOfCloth) {
         self.image = image
         self.marca = brand.rawValue
         self.material = cloth.rawValue
-        
-        UserDefaults.standard.setValue(self.frase, forKey: fraseDefaults)
+    
         UserDefaults.standard.set(self.image, forKey: imageDefaults)
         UserDefaults.standard.set(self.marca, forKey: brandDefaults)
         UserDefaults.standard.set(self.material, forKey: clothDefaults)
     }
     
-    func getNextItem() -> (phrase: String, image: String, brand: Utils.TypeOfBrand, cloth: Utils.TypeOfCloth)? {
+    func getNextItem() -> (image: String, brand: Utils.TypeOfBrand, cloth: Utils.TypeOfCloth)? {
         if marca == "" {
             return nil
         }
@@ -126,6 +121,11 @@ class NextItem {
         let brand = Utils.TypeOfBrand(rawValue: marca)!
         let mater = Utils.TypeOfCloth(rawValue: material)!
         
-        return (frase, image, brand, mater)
+        return (image, brand, mater)
+    }
+    
+    func resetNextItem() {
+        marca = ""
+        UserDefaults.standard.set("", forKey: brandDefaults)
     }
 }
