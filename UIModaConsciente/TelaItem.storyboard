@@ -257,7 +257,7 @@ que a média da categoria.</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkw-Hn-hke">
-                                <rect key="frame" x="71" y="100" width="272" height="46"/>
+                                <rect key="frame" x="71" y="54" width="272" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="3yq-uC-jfC"/>
                                 </constraints>
@@ -409,7 +409,7 @@ abrigados com essa compra!</string>
                             <constraint firstItem="hlN-lK-M8B" firstAttribute="top" secondItem="GiD-vL-mqx" secondAttribute="bottom" constant="8" symbolic="YES" id="UOp-m5-WmY"/>
                             <constraint firstItem="Vgl-pY-7YN" firstAttribute="leading" secondItem="7jd-4C-Wrs" secondAttribute="leading" constant="94" id="UrC-Qk-7xq"/>
                             <constraint firstItem="B8a-f3-pqW" firstAttribute="top" secondItem="sUG-lS-gAc" secondAttribute="bottom" constant="31" id="V7e-IY-xoN"/>
-                            <constraint firstItem="Zkw-Hn-hke" firstAttribute="top" secondItem="7jd-4C-Wrs" secondAttribute="top" constant="56" id="W5i-HW-fNk"/>
+                            <constraint firstItem="Zkw-Hn-hke" firstAttribute="top" secondItem="7jd-4C-Wrs" secondAttribute="top" constant="10" id="W5i-HW-fNk"/>
                             <constraint firstItem="Vz3-FQ-Klm" firstAttribute="bottom" secondItem="ZCq-Mu-U68" secondAttribute="bottom" id="W7x-Oe-vmE"/>
                             <constraint firstItem="B8a-f3-pqW" firstAttribute="leading" secondItem="Pfx-IW-Yt8" secondAttribute="leadingMargin" id="WLR-ye-end"/>
                             <constraint firstItem="sUG-lS-gAc" firstAttribute="leading" secondItem="7jd-4C-Wrs" secondAttribute="leading" constant="48" id="Y5D-xE-jOM"/>
@@ -464,7 +464,7 @@ abrigados com essa compra!</string>
                             <constraint firstItem="Zkw-Hn-hke" firstAttribute="leading" secondItem="7jd-4C-Wrs" secondAttribute="leading" constant="71" id="upb-VN-Xal"/>
                             <constraint firstItem="Z5f-hZ-t8y" firstAttribute="top" secondItem="Log-bN-TUO" secondAttribute="top" id="vHB-0r-LUd"/>
                             <constraint firstItem="4dp-ol-v7t" firstAttribute="leading" secondItem="Q4Y-QS-rt0" secondAttribute="trailing" constant="24" id="wfb-fo-0cv"/>
-                            <constraint firstItem="Dpa-Gx-sR8" firstAttribute="top" secondItem="Zkw-Hn-hke" secondAttribute="bottom" constant="13" id="wxV-Oq-BGS"/>
+                            <constraint firstItem="Dpa-Gx-sR8" firstAttribute="top" relation="lessThanOrEqual" secondItem="Zkw-Hn-hke" secondAttribute="bottom" constant="59" id="wxV-Oq-BGS"/>
                             <constraint firstItem="YIt-Hs-DNL" firstAttribute="trailing" secondItem="zi6-OL-f7G" secondAttribute="trailing" id="xsI-ro-L54"/>
                             <constraint firstItem="1ww-4c-FOS" firstAttribute="top" secondItem="fiY-MU-37A" secondAttribute="top" id="xwK-Bg-AzC"/>
                             <constraint firstItem="o4q-ie-y6v" firstAttribute="top" secondItem="ixw-5u-wrB" secondAttribute="bottom" constant="32" id="z6f-3n-btp"/>
