@@ -76,6 +76,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             
             recentCollectionViewCell.RecentClotheIcon.image = UIImage(named: icon)
             
+            recentCollectionViewCell.functionSegue = {
+                self.performSegue(withIdentifier: "ShowTelaItemPrincipalID", sender: self)
+            }
+            
             return recentCollectionViewCell
         }
 

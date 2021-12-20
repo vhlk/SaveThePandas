@@ -75,7 +75,7 @@
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain"/>
                                                             <connections>
-                                                                <segue destination="lZ9-xs-zia" kind="show" identifier="ShowImageViewCamera" id="XoC-9x-Nmb"/>
+                                                                <action selector="recentButton:" destination="hDn-V7-42u" eventType="touchUpInside" id="u0b-Ry-wtr"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -200,6 +200,7 @@
                         <outlet property="newsViewController" destination="8x3-Zb-oZP" id="TYD-zA-sDe"/>
                         <outlet property="recentViewController" destination="0LY-jc-Cna" id="aer-fO-bXl"/>
                         <segue destination="AGQ-bL-71Y" kind="show" identifier="ShowImageViewCamera" id="Z3O-cZ-B7E"/>
+                        <segue destination="lZ9-xs-zia" kind="show" identifier="ShowTelaItemPrincipalID" id="nBd-C8-ouD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -299,7 +300,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="XoC-9x-Nmb"/>
+        <segue reference="nBd-C8-ouD"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Ellipse 2" width="204" height="204"/>

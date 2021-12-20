@@ -14,4 +14,8 @@ class RecentCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var RecentClotheType: UITextView!
     @IBOutlet weak var RecentClotheBrand: UITextView!
     
+    var functionSegue : (()->())?
+    @IBAction func recentButton(_ sender: UIButton) {
+        functionSegue?()
+    }
 }
