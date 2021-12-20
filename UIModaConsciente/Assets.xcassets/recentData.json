@@ -2,21 +2,25 @@
 	{
 		"name":"Riachuelo",
 		"type":"Camisa",
+        "cloth":"Lã",
 		"id":1
 	},
 	{
 		"name":"M. Officer",
 		"type":"Camisa",
+        "cloth":"Algodão Orgânico",
 		"id":2
 	},
 	{
 		"name":"Zara",
 		"type":"Calça",
+        "cloth":"Denim",
 		"id":3
 	},
 	{
 		"name":"Mash",
 		"type":"Saia",
+        "cloth":"Linho",
 		"id":4
 	}
 ]

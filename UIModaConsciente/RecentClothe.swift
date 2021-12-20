@@ -10,5 +10,6 @@ import Foundation
 struct RecentClothe: Codable {
     var name: String
     var type: String
+    var cloth: String
     var id: Int
 }

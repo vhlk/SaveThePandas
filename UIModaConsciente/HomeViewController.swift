@@ -55,9 +55,13 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         } else {
             let recentCollectionViewCell = recentViewController.dequeueReusableCell(withReuseIdentifier: "RecentCell", for: indexPath) as! RecentCollectionViewCell
             let Ellipse = "Ellipse 2"
+            let brandName = recentData[indexPath.row].name
+            let clothType = recentData[indexPath.row].cloth
             recentCollectionViewCell.Ellipse.image = UIImage(named: Ellipse)
             recentCollectionViewCell.RecentClotheType.text = recentData[indexPath.row].type
-            recentCollectionViewCell.RecentClotheBrand.text = recentData[indexPath.row].name
+            recentCollectionViewCell.RecentClotheBrand.text = brandName
+            recentCollectionViewCell.brand = Utils.TypeOfBrand(rawValue: brandName) ?? Utils.TypeOfBrand.mash
+            recentCollectionViewCell.cloth = Utils.TypeOfCloth(rawValue: clothType) ?? Utils.TypeOfCloth.poliester
             var icon = ""
             
             switch recentData[indexPath.row].type
