@@ -36,7 +36,7 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var itemTree3: UIImageView!
     @IBOutlet weak var itemTree4: UIImageView!
     @IBOutlet weak var itemTree5: UIImageView!
-    @IBOutlet weak var itemTreePhrase: UIImageView!
+    @IBOutlet weak var itemTreePhrase: UILabel!
     @IBOutlet weak var itemBrandLabel: UILabel!
     @IBOutlet weak var itemBrandEmoti: UIImageView!
     @IBOutlet weak var itemMaterialLabel: UILabel!
@@ -79,6 +79,18 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
             itemImage.image = UIImage(named: image)
             itemBrandLabel.text = "Marca: \(marca.rawValue)"
             itemMaterialLabel.text = "Material: \(material.rawValue)"
+            
+            let itemRating = (Utils.brand2Value(brand: marca) + Utils.cloth2Value(cloth: material))/2 // 0 a 5
+            
+            if (itemRating > 3) {
+                itemPhrase.text = "Os bichos-preguiça continuarão abrigados com essa compra!"
+            } else {
+                itemPhrase.text = "Os bichos-preguiça estarão perdendo suas casinhas com essa compra :("
+            }
+            
+            Utils.setTreesByValue(tree1: itemTree1, tree2: itemTree2, tree3: itemTree3, tree4: itemTree4, tree5: itemTree5, value: Double(itemRating))
+            
+            itemTreePhrase.text = "Essa peça é \(itemRating*2*10)% mais consciente que a média da categoria."
         }
     }
     
