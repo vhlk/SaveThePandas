@@ -11,6 +11,8 @@ class PopUpViewController: UIViewController {
     @IBOutlet weak var NomeField: UITextField!
     @IBOutlet weak var DescricaoField: UITextField!
     
+    private var itemId: Int = 0
+    
     var numOfStars = 0
     
     @IBAction func Click1Star(_ sender: Any) {
@@ -38,9 +40,15 @@ class PopUpViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let lastReview = LastReview()
         
-        if let (name, review, _, _) = lastReview.getLastReview() {
-            NomeField.text = name
-            DescricaoField.text = review
+        if let (name, review, _, _, lastReviewID) = lastReview.getLastReview() {
+            let nextItem = NextItem()
+            if let (_, _, _, id) = nextItem.getNextItem() {
+                self.itemId = id
+                if lastReviewID == id {
+                    NomeField.text = name
+                    DescricaoField.text = review
+                }
+            }
         }
     }
     
@@ -86,10 +94,11 @@ class PopUpViewController: UIViewController {
             
             let randomInt = Int.random(in: 0..<2)
             
-            reviewsDatabase.addReview(usrName: NomeField.text!, review: DescricaoField.text!, stars: numOfStars, usrPhotoName: photos[randomInt])
+            
+            reviewsDatabase.addReview(usrName: NomeField.text!, review: DescricaoField.text!, stars: numOfStars, usrPhotoName: photos[randomInt], itemID: itemId)
             
             let lastReview = LastReview()
-            lastReview.setLastReview(name: NomeField.text!, review: DescricaoField.text!, star: numOfStars, face: photos[randomInt])
+            lastReview.setLastReview(name: NomeField.text!, review: DescricaoField.text!, star: numOfStars, face: photos[randomInt], id: itemId)
             
             let messageVC = UIAlertController(title: "Avaliação salva", message: "Avaliação salva com sucesso" , preferredStyle: .actionSheet)
             present(messageVC, animated: true) {

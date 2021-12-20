@@ -14,6 +14,7 @@ class ViewAllReviewViewController: UIViewController, UICollectionViewDataSource 
     private var reviews: [String] = []
     private var reviewsStars: [Int] = []
     private var rostos: [String] = []
+    private var itemId:Int = 0
     
     @IBOutlet weak var reviewsCollectionView: UICollectionView!
     @IBOutlet weak var star1: UIImageView!
@@ -30,6 +31,11 @@ class ViewAllReviewViewController: UIViewController, UICollectionViewDataSource 
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        let nextItem = NextItem()
+        if let (_, _, _, id) = nextItem.getNextItem() {
+            self.itemId = id
+        }
+        
         reloadCollectionViewData()
         
         NotificationCenter.default.addObserver(self, selector: #selector(NewReview(_:)), name: Notification.Name(rawValue: "NewReview"), object: nil)
@@ -42,9 +48,9 @@ class ViewAllReviewViewController: UIViewController, UICollectionViewDataSource 
     func reloadCollectionViewData() {
         let reviewsDatabase = ReviewsDatabase()
         
-        (names, reviews, reviewsStars, rostos) = reviewsDatabase.getAllReviews()
+        (names, reviews, reviewsStars, rostos) = reviewsDatabase.getReviewsById(id: itemId)
         
-        let mean = reviewsDatabase.getStarsMean()
+        let mean = reviewsDatabase.getStarsMeanById(id: itemId)
         
         setStarsByValue(star1: star1, star2: star2, star3: star3, star4: star4, star5: star5, value: mean)
         

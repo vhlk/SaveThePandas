@@ -67,6 +67,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             recentCollectionViewCell.brand = Utils.TypeOfBrand(rawValue: brandName) ?? Utils.TypeOfBrand.mash
             recentCollectionViewCell.cloth = Utils.TypeOfCloth(rawValue: clothType) ?? Utils.TypeOfCloth.poliester
             recentCollectionViewCell.image = typeImage
+            recentCollectionViewCell.id = recentData[indexPath.row].id
             var icon = ""
             
             switch recentData[indexPath.row].type

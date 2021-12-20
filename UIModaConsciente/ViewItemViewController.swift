@@ -14,6 +14,7 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
     private var reviews: [String] = []
     private var reviewsStars: [Int] = []
     private var rostos: [String] = []
+    private var itemId: Int = 0
     
     @IBOutlet weak var reviewsCollectionView: UICollectionView!
     @IBOutlet weak var reviewStar1ImageView: UIImageView!
@@ -69,14 +70,15 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        loadCollectionViewData()
         loadItemData()
+        loadCollectionViewData()
     }
     
     func loadItemData() {
         let nextItem = NextItem()
-        if let (image, marca, material) = nextItem.getNextItem() {
+        if let (image, marca, material, id) = nextItem.getNextItem() {
             self.title = image
+            self.itemId = id
             itemImage.image = UIImage(named: image)
             itemBrandLabel.text = "Marca: \(marca.rawValue)"
             itemMaterialLabel.text = "Material: \(material.rawValue)"
@@ -110,9 +112,11 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
     func loadCollectionViewData() {
         let reviewsDatabase = ReviewsDatabase()
         
-        (names, reviews, reviewsStars, rostos) = reviewsDatabase.getAllReviews()
+        (names, reviews, reviewsStars, rostos) = reviewsDatabase.getReviewsById(id: itemId)
+        print("item id: \(itemId)")
+        print("names: \(names)")
         
-        let mean = reviewsDatabase.getStarsMean()
+        let mean = reviewsDatabase.getStarsMeanById(id: itemId)
         
         Utils.setStarsByValue(star1: reviewStar1ImageView, star2: reviewStar2ImageView, star3: reviewStar3ImageView, star4: reviewStar4ImageView, star5: reviewStar5ImageView, value: mean)
         
@@ -123,9 +127,11 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
         self.reviewsCollectionView.reloadData()
         
         let lastReview = LastReview()
-        if let (_, _, star, _) = lastReview.getLastReview() {
-            numSelectedReviews = star
-            Utils.setButtonStarsByValue(estrela1Button: reviewStar1Button, estrela2Button: reviewStar2Button, estrela3Button: reviewStar3Button, estrela4Button: reviewStar4Button, estrela5Button: reviewStar5Button, value: Double(star))
+        if let (_, _, star, _, id) = lastReview.getLastReview() {
+            if self.itemId == id {
+                numSelectedReviews = star
+                Utils.setButtonStarsByValue(estrela1Button: reviewStar1Button, estrela2Button: reviewStar2Button, estrela3Button: reviewStar3Button, estrela4Button: reviewStar4Button, estrela5Button: reviewStar5Button, value: Double(star))
+            }
         }
     }
     
