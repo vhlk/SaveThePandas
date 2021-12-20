@@ -13,53 +13,61 @@
         <scene sceneID="pNC-YM-85J">
             <objects>
                 <viewController storyboardIdentifier="TelaItemPrincipal" title="Item details" modalPresentationStyle="fullScreen" id="kYL-Hc-bfr" userLabel="Detalhes do item" customClass="ViewItemViewController" customModule="UIModaConsciente" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Pfx-IW-Yt8">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Pfx-IW-Yt8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Ellipse 2" translatesAutoresizingMaskIntoConstraints="NO" id="Dpa-Gx-sR8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Ellipse 2" translatesAutoresizingMaskIntoConstraints="NO" id="Dpa-Gx-sR8">
                                 <rect key="frame" x="99" y="159" width="217" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="1n7-kU-Mz3"/>
+                                    <constraint firstAttribute="height" constant="217" id="AcO-j5-z3n"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="camisa-pintada 1" translatesAutoresizingMaskIntoConstraints="NO" id="y4c-qU-pOu">
-                                <rect key="frame" x="78" y="181" width="258" height="173"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="camisa-pintada 1" translatesAutoresizingMaskIntoConstraints="NO" id="y4c-qU-pOu">
+                                <rect key="frame" x="78" y="168" width="259" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="OoP-th-fU7"/>
+                                    <constraint firstAttribute="width" constant="258" id="tZU-D1-S0f"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Vector" translatesAutoresizingMaskIntoConstraints="NO" id="SYs-bF-Sd3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Vector" translatesAutoresizingMaskIntoConstraints="NO" id="SYs-bF-Sd3">
                                 <rect key="frame" x="94" y="384" width="63" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="5W1-jD-fgY"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Vector 2" translatesAutoresizingMaskIntoConstraints="NO" id="Vgl-pY-7YN">
-                                <rect key="frame" x="94" y="386" width="62" height="18"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Vector 2" translatesAutoresizingMaskIntoConstraints="NO" id="Vgl-pY-7YN">
+                                <rect key="frame" x="94" y="389" width="62" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="0kP-go-Qgq"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Vector" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Y-QS-rt0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Vector" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Y-QS-rt0">
                                 <rect key="frame" x="138" y="384" width="63" height="39"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Vector 2" translatesAutoresizingMaskIntoConstraints="NO" id="Z5f-hZ-t8y">
-                                <rect key="frame" x="138" y="386" width="62" height="18"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Vector 2" translatesAutoresizingMaskIntoConstraints="NO" id="Z5f-hZ-t8y">
+                                <rect key="frame" x="138" y="389" width="62" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="62" id="V0A-xU-m9W"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Vector" translatesAutoresizingMaskIntoConstraints="NO" id="fy5-cx-V82">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Vector" translatesAutoresizingMaskIntoConstraints="NO" id="fy5-cx-V82">
                                 <rect key="frame" x="181" y="384" width="63" height="39"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Vector 2" translatesAutoresizingMaskIntoConstraints="NO" id="Log-bN-TUO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Vector 2" translatesAutoresizingMaskIntoConstraints="NO" id="Log-bN-TUO">
                                 <rect key="frame" x="181" y="386" width="62" height="18"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Vector" translatesAutoresizingMaskIntoConstraints="NO" id="zjo-GM-Q9q">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Vector" translatesAutoresizingMaskIntoConstraints="NO" id="zjo-GM-Q9q">
                                 <rect key="frame" x="225" y="384" width="63" height="39"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Vector" translatesAutoresizingMaskIntoConstraints="NO" id="5Gg-uz-Hgm" userLabel="Item Tree">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Vector" translatesAutoresizingMaskIntoConstraints="NO" id="5Gg-uz-Hgm" userLabel="Item Tree">
                                 <rect key="frame" x="269" y="384" width="63" height="39"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Vector 2" translatesAutoresizingMaskIntoConstraints="NO" id="4dp-ol-v7t">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Vector 2" translatesAutoresizingMaskIntoConstraints="NO" id="4dp-ol-v7t">
                                 <rect key="frame" x="225" y="386" width="62" height="18"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5lB-DM-TGQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5lB-DM-TGQ">
                                 <rect key="frame" x="79" y="420" width="257" height="62"/>
                                 <color key="tintColor" red="0.29278837149999998" green="1" blue="0.68391967980000001" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                 <string key="text">Essa peça é 70% mais consciente
@@ -68,10 +76,10 @@ que a média da categoria.</string>
                                 <color key="textColor" red="0.1246117207" green="0.71920683890000003" blue="0.2855865293" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rectangle 7" translatesAutoresizingMaskIntoConstraints="NO" id="cn9-3j-ePy">
-                                <rect key="frame" x="42" y="444" width="341" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Rectangle 7" translatesAutoresizingMaskIntoConstraints="NO" id="cn9-3j-ePy">
+                                <rect key="frame" x="42" y="447" width="342" height="126"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marca: Reserva" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vA7-7M-EA5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Marca: Reserva" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vA7-7M-EA5">
                                 <rect key="frame" x="56" y="500" width="250" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="GFs-Ce-7Ms"/>
@@ -81,13 +89,13 @@ que a média da categoria.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rectangle 7" translatesAutoresizingMaskIntoConstraints="NO" id="YIt-Hs-DNL">
-                                <rect key="frame" x="42" y="506" width="341" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Rectangle 7" translatesAutoresizingMaskIntoConstraints="NO" id="YIt-Hs-DNL">
+                                <rect key="frame" x="42" y="508" width="342" height="127"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Group 9" translatesAutoresizingMaskIntoConstraints="NO" id="o4q-ie-y6v">
-                                <rect key="frame" x="322" y="555" width="52" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Group 9" translatesAutoresizingMaskIntoConstraints="NO" id="o4q-ie-y6v">
+                                <rect key="frame" x="323" y="557" width="52" height="29"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Material: Algodão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQF-Bo-QCM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Material: Algodão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQF-Bo-QCM">
                                 <rect key="frame" x="56" y="561" width="250" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="8CO-Dz-TqN"/>
@@ -97,20 +105,20 @@ que a média da categoria.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Group 6" translatesAutoresizingMaskIntoConstraints="NO" id="ixw-5u-wrB">
-                                <rect key="frame" x="322" y="493" width="52" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Group 6" translatesAutoresizingMaskIntoConstraints="NO" id="ixw-5u-wrB">
+                                <rect key="frame" x="323" y="495" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="52" id="pu5-mh-cj9"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avaliações da comunidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiD-vL-mqx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Avaliações da comunidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiD-vL-mqx">
                                 <rect key="frame" x="20" y="726" width="194" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hlN-lK-M8B">
-                                <rect key="frame" x="22" y="751" width="361" height="111"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hlN-lK-M8B">
+                                <rect key="frame" x="22" y="751" width="362" height="111"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="111" id="OfU-L1-vFX"/>
@@ -194,8 +202,8 @@ que a média da categoria.</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9r-eY-MFI">
-                                <rect key="frame" x="283" y="719" width="100" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9r-eY-MFI">
+                                <rect key="frame" x="283" y="719" width="101" height="31"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Ver todas"/>
@@ -203,12 +211,12 @@ que a média da categoria.</string>
                                     <segue destination="wRu-gq-vdQ" kind="show" id="P0J-8e-Pbv"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4.0" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="B8a-f3-pqW" userLabel="AvaliacaoGeral">
-                                <rect key="frame" x="20" y="688" width="56" height="37"/>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4.0" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="B8a-f3-pqW" userLabel="AvaliacaoGeral">
+                                <rect key="frame" x="20" y="689" width="56" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Faça sua avaliação:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUG-lS-gAc" userLabel="AvaliacaoUsuario">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Faça sua avaliação:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUG-lS-gAc" userLabel="AvaliacaoUsuario">
                                 <rect key="frame" x="48" y="636" width="154" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="hLV-Oe-jr5"/>
@@ -217,7 +225,7 @@ que a média da categoria.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VectorEstrelaDourada" translatesAutoresizingMaskIntoConstraints="NO" id="1ww-4c-FOS" userLabel="Estrela1AvalGeral">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="VectorEstrelaDourada" translatesAutoresizingMaskIntoConstraints="NO" id="1ww-4c-FOS" userLabel="Estrela1AvalGeral">
                                 <rect key="frame" x="78" y="698" width="18" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="18" id="gd2-N9-eZI"/>
@@ -225,7 +233,7 @@ que a média da categoria.</string>
                                     <constraint firstAttribute="height" constant="18" id="ucX-cR-hPi"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VectorEstrelaDourada" translatesAutoresizingMaskIntoConstraints="NO" id="fiY-MU-37A" userLabel="Estrela2AvalGeral">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="VectorEstrelaDourada" translatesAutoresizingMaskIntoConstraints="NO" id="fiY-MU-37A" userLabel="Estrela2AvalGeral">
                                 <rect key="frame" x="97" y="698" width="18" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="ECZ-9X-bFk"/>
@@ -233,7 +241,7 @@ que a média da categoria.</string>
                                     <constraint firstAttribute="width" constant="18" id="c6r-B3-rrN"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VectorEstrelaDourada" translatesAutoresizingMaskIntoConstraints="NO" id="XtD-35-MzM" userLabel="Estrela3AvalGeral">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="VectorEstrelaDourada" translatesAutoresizingMaskIntoConstraints="NO" id="XtD-35-MzM" userLabel="Estrela3AvalGeral">
                                 <rect key="frame" x="116" y="698" width="18" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="7XB-Vd-gfk"/>
@@ -241,7 +249,7 @@ que a média da categoria.</string>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="18" id="mNI-Uy-dMw"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VectorEstrelaDourada" translatesAutoresizingMaskIntoConstraints="NO" id="Vz3-FQ-Klm" userLabel="Estrela4AvalGeral">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="VectorEstrelaDourada" translatesAutoresizingMaskIntoConstraints="NO" id="Vz3-FQ-Klm" userLabel="Estrela4AvalGeral">
                                 <rect key="frame" x="135" y="698" width="18" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="18" id="I84-B9-Wnr"/>
@@ -249,7 +257,7 @@ que a média da categoria.</string>
                                     <constraint firstAttribute="width" constant="18" id="gR5-tg-JAa"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VectorEstrelaVazia" translatesAutoresizingMaskIntoConstraints="NO" id="ZCq-Mu-U68" userLabel="Estrela5AvalGeral">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="VectorEstrelaVazia" translatesAutoresizingMaskIntoConstraints="NO" id="ZCq-Mu-U68" userLabel="Estrela5AvalGeral">
                                 <rect key="frame" x="154" y="698" width="18" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="18" id="17X-OT-CJQ"/>
@@ -257,7 +265,7 @@ que a média da categoria.</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Os bichos-preguiça continuarão abrigados com essa compra!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Zkw-Hn-hke">
-                                <rect key="frame" x="71" y="54" width="272" height="46"/>
+                                <rect key="frame" x="71" y="54" width="273" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="3yq-uC-jfC"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="272" id="tKU-d0-CLr"/>
@@ -266,8 +274,8 @@ que a média da categoria.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zi6-OL-f7G" userLabel="AvaliacaoView">
-                                <rect key="frame" x="202" y="614" width="181" height="66"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zi6-OL-f7G" userLabel="AvaliacaoView">
+                                <rect key="frame" x="202" y="614" width="182" height="66"/>
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nia-oL-jd6" userLabel="EstrelaAvaliacao1">
                                         <rect key="frame" x="15" y="19.5" width="27" height="27"/>
