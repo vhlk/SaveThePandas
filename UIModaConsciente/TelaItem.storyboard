@@ -216,8 +216,8 @@ que a média da categoria.</string>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Faça sua avaliação:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUG-lS-gAc" userLabel="AvaliacaoUsuario">
-                                <rect key="frame" x="48" y="636" width="154" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Faça sua avaliação:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUG-lS-gAc" userLabel="AvaliacaoUsuario">
+                                <rect key="frame" x="40" y="636" width="170" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="hLV-Oe-jr5"/>
                                 </constraints>
@@ -275,7 +275,7 @@ que a média da categoria.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zi6-OL-f7G" userLabel="AvaliacaoView">
-                                <rect key="frame" x="202" y="614" width="182" height="66"/>
+                                <rect key="frame" x="210" y="614" width="174" height="66"/>
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nia-oL-jd6" userLabel="EstrelaAvaliacao1">
                                         <rect key="frame" x="15" y="19.5" width="27" height="27"/>
@@ -423,7 +423,7 @@ que a média da categoria.</string>
                             <constraint firstItem="Zkw-Hn-hke" firstAttribute="top" secondItem="7jd-4C-Wrs" secondAttribute="top" constant="10" id="W5i-HW-fNk"/>
                             <constraint firstItem="Vz3-FQ-Klm" firstAttribute="bottom" secondItem="ZCq-Mu-U68" secondAttribute="bottom" id="W7x-Oe-vmE"/>
                             <constraint firstItem="B8a-f3-pqW" firstAttribute="leading" secondItem="Pfx-IW-Yt8" secondAttribute="leadingMargin" id="WLR-ye-end"/>
-                            <constraint firstItem="sUG-lS-gAc" firstAttribute="leading" secondItem="7jd-4C-Wrs" secondAttribute="leading" constant="48" id="Y5D-xE-jOM"/>
+                            <constraint firstItem="sUG-lS-gAc" firstAttribute="leading" secondItem="7jd-4C-Wrs" secondAttribute="leading" constant="40" id="Y5D-xE-jOM"/>
                             <constraint firstItem="fy5-cx-V82" firstAttribute="centerX" secondItem="Log-bN-TUO" secondAttribute="centerX" id="Yl7-Nr-NZw"/>
                             <constraint firstItem="cn9-3j-ePy" firstAttribute="leading" secondItem="YIt-Hs-DNL" secondAttribute="leading" id="Yna-aG-uMB"/>
                             <constraint firstItem="5Gg-uz-Hgm" firstAttribute="leading" secondItem="fy5-cx-V82" secondAttribute="trailing" constant="25" id="ZAv-Ih-nDi"/>
