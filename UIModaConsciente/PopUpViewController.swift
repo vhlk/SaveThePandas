@@ -103,6 +103,7 @@ class PopUpViewController: UIViewController {
             let messageVC = UIAlertController(title: "Avaliação salva", message: "Avaliação salva com sucesso" , preferredStyle: .actionSheet)
             present(messageVC, animated: true) {
                 NotificationCenter.default.post(name: Notification.Name(rawValue: "NewReview"), object: nil)
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "NewLastReview"), object: nil)
                 Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (_) in
                                 messageVC.dismiss(animated: true, completion: nil)}
                 )
