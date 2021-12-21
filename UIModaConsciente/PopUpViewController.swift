@@ -39,15 +39,16 @@ class PopUpViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let lastReview = LastReview()
+        let nextItem = NextItem()
         
-        if let (name, review, _, _, lastReviewID) = lastReview.getLastReview() {
-            let nextItem = NextItem()
-            if let (_, _, _, id) = nextItem.getNextItem() {
-                self.itemId = id
-                if lastReviewID == id {
-                    NomeField.text = name
-                    DescricaoField.text = review
-                }
+        if let (_, _, _, id) = nextItem.getNextItem() {
+            self.itemId = id
+            
+            if let (name, review, _, _, lastReviewID) = lastReview.getLastReview() {
+                    if lastReviewID == id {
+                        NomeField.text = name
+                        DescricaoField.text = review
+                    }
             }
         }
     }

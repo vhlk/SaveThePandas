@@ -83,7 +83,30 @@ class ViewItemViewController: UIViewController, UICollectionViewDataSource {
             itemBrandLabel.text = "Marca: \(marca.rawValue)"
             itemMaterialLabel.text = "Material: \(material.rawValue)"
             
-            let itemRating = Double(Utils.brand2Value(brand: marca) + Utils.cloth2Value(cloth: material)) / 2.0 // 0 a 5
+            let brandRating = Utils.brand2Value(brand: marca)
+            let clothRating = Utils.cloth2Value(cloth: material)
+            
+            let happyEmoti = "Group 6"
+            let midEmoti = "Group 9"
+            let unhappyEmoti = "frown - EmotiTriste"
+            
+            if brandRating >= 4 {
+                itemBrandEmoti.image = UIImage(named: happyEmoti)
+            } else if brandRating >= 3 {
+                itemBrandEmoti.image = UIImage(named: midEmoti)
+            } else {
+                itemBrandEmoti.image = UIImage(named: unhappyEmoti)
+            }
+            
+            if clothRating >= 4 {
+                itemMateralEmoti.image = UIImage(named: happyEmoti)
+            } else if brandRating >= 3 {
+                itemMateralEmoti.image = UIImage(named: midEmoti)
+            } else {
+                itemMateralEmoti.image = UIImage(named: unhappyEmoti)
+            }
+            
+            let itemRating = Double(brandRating + clothRating) / 2.0 // 0 a 5
             
             if (itemRating > 3) {
                 itemPhrase.text = "Os bichos-preguiça continuarão abrigados com essa compra!"
