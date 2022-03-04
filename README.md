@@ -11,5 +11,5 @@ Take a look of how it works:
 ![Demo SaveThePandas](medias/Pitch-SaveThePandas.gif)
 
 <p>  <font size="6">And SaveThePandas!</font> 
-<img src="medias/SaveThePandas.png" alt="Alt text" title="Optional title" style="display: inline-block; margin: 0 auto; max-width: 50px">
+<img src="medias/SaveThePandas.png" alt="Alt text" title="Optional title" style="display: inline-block; margin: 0 auto; width: 50px">
 </p>
